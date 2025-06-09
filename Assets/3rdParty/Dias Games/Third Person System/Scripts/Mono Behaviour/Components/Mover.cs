@@ -378,5 +378,21 @@ namespace DiasGames.Components
 
 			return relative;
 		}
+
+		// void OnTriggerEnter(Collider other)
+		// {
+		// 	// Kiểm tra nếu chạm vào một đối tượng cụ thể, ví dụ như "JumpTrigger"
+		// 	if (other.CompareTag("JumpTrigger"))
+		// 	{
+		// 		Jump();
+		// 	}
+		// }
+		// void Jump()
+		// {
+		// 	// Tính toán lực nhảy với gravity cụ thể
+		// 	Vector3 jumpVector = Vector3.up * Mathf.Sqrt(2 * 6f * 9.81f);
+		// 	_controller.Move(jumpVector * Time.deltaTime);
+		// }
+
 	}
 }

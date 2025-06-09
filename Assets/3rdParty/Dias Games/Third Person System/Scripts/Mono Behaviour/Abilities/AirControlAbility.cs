@@ -85,7 +85,7 @@ namespace DiasGames.Abilities
 
         public override void UpdateAbility()
         {
-            CheckDoubleJump();
+            // CheckDoubleJump();
             
             
             if (_mover.IsGrounded())
@@ -189,7 +189,7 @@ namespace DiasGames.Abilities
                 Debug.Log("Jump");
                 jumpcount --;
                 Vector3 velocity = _mover.GetVelocity();
-                velocity.y = Mathf.Sqrt(jumpHeight * -2f * _mover.GetGravity());
+                velocity.y = Mathf.Sqrt(jumpHeight * -6f * _mover.GetGravity());
 
                 _mover.SetVelocity(velocity);
                 _animator.CrossFadeInFixedTime(animJumpState, 0.1f);
@@ -198,8 +198,13 @@ namespace DiasGames.Abilities
             }   
 
         }
-        
-
+        [ContextMenu("AddForce")]
+        public void AddForce(){
+            Vector3 velocity = _mover.GetVelocity();
+            velocity.y = Mathf.Sqrt(jumpHeight * -6f * _mover.GetGravity());
+            _mover.SetVelocity(velocity);
+            _animator.CrossFadeInFixedTime(animJumpState, 0.1f);
+        }
 
         private void HardLand()
         {
