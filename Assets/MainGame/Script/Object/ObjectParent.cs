@@ -8,7 +8,6 @@ public class ObjectParent : MonoBehaviour
     void OnCollisionEnter(Collision other)
     {
         if(other.gameObject.CompareTag("Player")){
-            Debug.Log("setparent");
             player = other.transform;
             oldParent = player.parent;
             // Vector3 originalPosition = player.position;
@@ -24,10 +23,9 @@ public class ObjectParent : MonoBehaviour
     void OnCollisionExit(Collision other)
     {
         if(other.gameObject.CompareTag("Player")){
-            Debug.Log("setOldParent");
             player = other.transform;
             player.SetParent(oldParent);
-            player.localScale = Vector3.one;
+            // player.localScale = Vector3.one;
         }
     }
 }

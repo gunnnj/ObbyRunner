@@ -1,16 +1,18 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class MasterUI : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    public static MasterUI Instance {get; private set;}
+    [SerializeField] protected List<ScreenUI> listScreen;
 
-    // Update is called once per frame
-    void Update()
+    private void Awake()
     {
+        if(Instance != null && Instance != this){
+            Destroy(gameObject);
+            return;
+        }
+        Instance = this;
         
     }
 }

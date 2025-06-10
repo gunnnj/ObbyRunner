@@ -30,7 +30,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void Update()
     {
-        
+    
         MoveAndRotate();
         ControlAnim();
 
@@ -77,25 +77,26 @@ public class PlayerMovement : MonoBehaviour
     }
     private void Move()
     {
-        Vector3 newPos = dir + transform.position;
-        transform.position = Vector3.Lerp(transform.position,newPos,speed*Time.deltaTime);
-
         // Vector3 forward = cameraTransform.forward;
         // Vector3 right = cameraTransform.right;
-
-        // // Chỉ sử dụng hướng ngang và dọc
-        // forward.y = 0;
         // right.y = 0;
-
-        // // Chuẩn hóa vector
+        // forward.y = 0;
         // forward.Normalize();
-        // right.Normalize();
+        // Vector3 newDir = (forward*dir.y + right*dir.x).normalized;
 
-        // // Tính toán hướng di chuyển dựa trên joystick
-        // Vector3 moveDirection = forward * dir.z + right * dir.x;
-        // Vector3 newPos = transform.position + moveDirection * speed * Time.deltaTime;
+        // rb.linearVelocity = new Vector3(newDir.x*speed, rb.linearVelocity.y,newDir.z*speed);
 
-        // transform.position = Vector3.Lerp(transform.position, newPos, speed * Time.deltaTime);
+        // if (newDir.magnitude > 0)
+        // {
+        //     Quaternion targetRotation = Quaternion.LookRotation(newDir);
+        //     transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotateSpeed * Time.deltaTime);
+        //     transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, 0);
+        // }
+
+        Vector3 newPos = transform.position+dir;
+        transform.position = Vector3.Lerp(transform.position,newPos,speed*Time.deltaTime);
+
+
 
     }
     public void Rotate(){
@@ -104,6 +105,10 @@ public class PlayerMovement : MonoBehaviour
     }
     private bool IsGrounded()
     {
-        return Physics.Raycast(transform.position, Vector3.down, checkDistance, groundLayer);
+        // return Physics.Raycast(transform.position, Vector3.down, checkDistance, groundLayer);
+        Vector3 checkPosition = transform.position - new Vector3(0, checkDistance, 0);
+    
+        // Kiểm tra xem có Collider nào trong phạm vi hình cầu
+        return Physics.CheckSphere(checkPosition, checkDistance, groundLayer);
     }
 }
