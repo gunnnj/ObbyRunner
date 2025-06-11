@@ -3,8 +3,10 @@ using UnityEngine;
 public class Seesaw : MonoBehaviour
 {
     public float rotationSpeed = 3f;
-    private bool isRight = false;
+    public bool isRight = false;
+    public bool useX = true;
     private bool isStart = false;
+
     void Update()
     {
         if(isStart){
@@ -21,12 +23,22 @@ public class Seesaw : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Player")){
             isStart = true;
-            if(other.contacts[0].point.z<transform.position.z){
-                isRight = true;
+            if(useX){
+                if(other.contacts[0].point.x<transform.position.x){
+                    isRight = true;
+                }
+                else{
+                    isRight = false;
+                }
+            }else{
+                if(other.contacts[0].point.z<transform.position.z){
+                    isRight = true;
+                }
+                else{
+                    isRight = false;
+                }
             }
-            else{
-                isRight = false;
-            }
+            
         }
     }
     void OnCollisionExit(Collision other)

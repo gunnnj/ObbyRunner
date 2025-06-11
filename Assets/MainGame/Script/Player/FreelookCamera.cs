@@ -1,63 +1,69 @@
-using System.Collections.Generic;
+using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
-public class FreelookCamera : MonoBehaviour
+public class FreelookCamera : MonoBehaviour, IDragHandler, IPointerDownHandler, IPointerUpHandler
 {
-    public float sensitivity = 2.0f; // Độ nhạy
-    private float rotationX = 0f;
-    private float rotationY = 0f;
+    Image imgCam;
+    [SerializeField] CinemachineFreeLook camFreelook;
+    private Vector2 lastTouchPosition;
+    string strMouseX = "Mouse X", strMouseY = "Mouse Y";
 
-    public GameObject targetPanel; // Panel cụ thể cần kiểm tra
-
-    void Update()
+    // Tăng giảm giá trị này để điều chỉnh độ nhạy của camera
+    [SerializeField] float touchSensitivityX = 0.1f; 
+    [SerializeField] float touchSensitivityY = 0.1f;
+    void Start()
     {
-        // Kiểm tra xem có chạm hay không
-        if (Input.touchCount > 0)
+        imgCam = GetComponent<Image>();
+
+        //mobile
+        camFreelook.m_XAxis.m_InputAxisName = null;
+        camFreelook.m_YAxis.m_InputAxisName = null;
+    }
+    public void OnDrag(PointerEventData eventData)
+    {
+        // if(RectTransformUtility.ScreenPointToLocalPointInRectangle(
+        //     imgCam.rectTransform,
+        //     eventData.position,
+        //     eventData.enterEventCamera,
+        //     out Vector2 posOut
+        // )){
+        //     camFreelook.m_XAxis.m_InputAxisName = strMouseX;
+        //     camFreelook.m_YAxis.m_InputAxisName = strMouseY;
+        // }
+        //mobile
+        if (RectTransformUtility.ScreenPointToLocalPointInRectangle(
+            imgCam.rectTransform,
+            eventData.position,
+            eventData.enterEventCamera,
+            out Vector2 posOut
+        ))
         {
-            Touch touch = Input.GetTouch(0);
+            Vector2 currentTouchPosition = eventData.position;
+            Vector2 deltaTouch = currentTouchPosition - lastTouchPosition;
 
-            // Kiểm tra nếu chạm đang diễn ra
-            if (touch.phase == TouchPhase.Moved)
-            {
-                // Kiểm tra xem chạm có nằm trên panel cụ thể không
-                if (!IsTouchingSpecificPanel(touch))
-                {
-                    rotationX += touch.deltaPosition.x * sensitivity;
-                    rotationY -= touch.deltaPosition.y * sensitivity;
+            // Áp dụng sự thay đổi vào InputAxisValue
+            // Lưu ý: Giá trị này cần được điều chỉnh bằng touchSensitivity
+            camFreelook.m_XAxis.m_InputAxisValue = deltaTouch.x * touchSensitivityX;
+            camFreelook.m_YAxis.m_InputAxisValue = deltaTouch.y * touchSensitivityY;
 
-                    // Giới hạn góc nhìn dọc
-                    rotationY = Mathf.Clamp(rotationY, -30f, 30f);
-
-                    // Áp dụng xoay cho camera
-                    transform.localRotation = Quaternion.Euler(rotationY, rotationX, 0);
-                }
-            }
+            lastTouchPosition = currentTouchPosition; // Cập nhật vị trí chạm cuối cùng
         }
     }
 
-    // Kiểm tra xem có chạm vào panel cụ thể hay không
-    private bool IsTouchingSpecificPanel(Touch touch)
+    public void OnPointerDown(PointerEventData eventData)
     {
-        // Tạo ray từ vị trí chạm
-        PointerEventData pointerData = new PointerEventData(EventSystem.current)
-        {
-            position = touch.position
-        };
+        // OnDrag(eventData);
+        //mobile
+        lastTouchPosition = eventData.position;
+    }
 
-        // Danh sách các đối tượng bị chạm
-        var results = new List<RaycastResult>();
-        EventSystem.current.RaycastAll(pointerData, results);
-
-        // Kiểm tra từng kết quả xem có trùng với targetPanel không
-        foreach (var result in results)
-        {
-            if (result.gameObject == targetPanel)
-            {
-                return true; // Đã chạm vào panel cụ thể
-            }
-        }
-
-        return false; // Không chạm vào panel cụ thể
+    public void OnPointerUp(PointerEventData eventData)
+    {
+        // camFreelook.m_XAxis.m_InputAxisName = null;
+        // camFreelook.m_YAxis.m_InputAxisName = null;
+        camFreelook.m_XAxis.m_InputAxisValue = 0;
+        camFreelook.m_YAxis.m_InputAxisValue = 0;
     }
 }

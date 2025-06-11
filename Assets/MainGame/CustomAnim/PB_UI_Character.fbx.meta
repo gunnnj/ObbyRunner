@@ -1,0 +1,1936 @@
+fileFormatVersion: 2
+guid: a31f87b6ce7e4994992b671a680a13b7
+ModelImporter:
+  serializedVersion: 22200
+  internalIDToNameTable: []
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: "\nClip 'FG_Loading_Falling_A' has import animation
+      warnings that might lower retargeting quality:\nNote: Activate translation
+      DOF on avatar to improve retargeting quality.\n\t'Chest_C_jnt' has translation
+      animation that will be discarded.\n\t'Pelvis_C_jnt' has translation animation
+      that will be discarded.\n\t'Pelvis_C_jnt' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\t'Hip_L_jnt' has translation
+      animation that will be discarded.\n\t'Ball_L_jnt' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\t'Hip_R_jnt' has translation
+      animation that will be discarded.\n\t'Ball_R_jnt' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\nClip 'FG_Idle_A' has
+      import animation warnings that might lower retargeting quality:\nNote: Activate
+      translation DOF on avatar to improve retargeting quality.\n\t'Pelvis_C_jnt'
+      has translation animation that will be discarded.\n\t'Pelvis_C_jnt' is inbetween
+      humanoid transforms and has rotation animation that will be discarded.\n\t'Hip_L_jnt'
+      has translation animation that will be discarded.\n\t'Hip_R_jnt' has translation
+      animation that will be discarded.\n\nClip 'FG_Walk_Right_A' has import animation
+      warnings that might lower retargeting quality:\nNote: Activate translation
+      DOF on avatar to improve retargeting quality.\n\t'Shoulder_R_jnt1' has translation
+      animation that will be discarded.\n\t'Pelvis_C_jnt' has translation animation
+      that will be discarded.\n\t'Pelvis_C_jnt' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\t'Hip_L_jnt' has translation
+      animation that will be discarded.\n\t'Ball_L_jnt' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\t'Hip_R_jnt' has translation
+      animation that will be discarded.\n\t'Ball_R_jnt' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\nClip 'FG_Walk_Left_A'
+      has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'Pelvis_C_jnt'
+      has translation animation that will be discarded.\n\t'Pelvis_C_jnt' is inbetween
+      humanoid transforms and has rotation animation that will be discarded.\n\t'Hip_L_jnt'
+      has translation animation that will be discarded.\n\t'Ball_L_jnt' is inbetween
+      humanoid transforms and has rotation animation that will be discarded.\n\t'Hip_R_jnt'
+      has translation animation that will be discarded.\n\t'Ball_R_jnt' is inbetween
+      humanoid transforms and has rotation animation that will be discarded.\n\nClip
+      'FG_Walk_A' has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'Pelvis_C_jnt'
+      has translation animation that will be discarded.\n\t'Pelvis_C_jnt' is inbetween
+      humanoid transforms and has rotation animation that will be discarded.\n\t'Hip_L_jnt'
+      has translation animation that will be discarded.\n\t'Ball_L_jnt' is inbetween
+      humanoid transforms and has rotation animation that will be discarded.\n\t'Hip_R_jnt'
+      has translation animation that will be discarded.\n\t'Ball_R_jnt' is inbetween
+      humanoid transforms and has rotation animation that will be discarded.\n\nClip
+      'FG_CostumeChangeLooking_A' has import animation warnings that might lower
+      retargeting quality:\nNote: Activate translation DOF on avatar to improve retargeting
+      quality.\n\t'Pelvis_C_jnt' has translation animation that will be discarded.\n\t'Pelvis_C_jnt'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\nClip
+      'FG_Idle_Joggingonspot' has import animation warnings that might lower retargeting
+      quality:\nNote: Activate translation DOF on avatar to improve retargeting quality.\n\t'Eye_L_jnt'
+      has scale animation that will be discarded.\n\t'Eye_R_jnt' has scale animation
+      that will be discarded.\n\t'Shoulder_L_jnt' has translation animation that
+      will be discarded.\n\t'Shoulder_R_jnt1' has translation animation that will
+      be discarded.\n\t'Pelvis_C_jnt' has translation animation that will be discarded.\n\t'Pelvis_C_jnt'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Hip_L_jnt'
+      has translation animation that will be discarded.\n\t'Ball_L_jnt' is inbetween
+      humanoid transforms and has rotation animation that will be discarded.\n\t'Hip_R_jnt'
+      has translation animation that will be discarded.\n\t'Ball_R_jnt' is inbetween
+      humanoid transforms and has rotation animation that will be discarded.\n\nClip
+      'FG_Idle_TouchingToes' has import animation warnings that might lower retargeting
+      quality:\nNote: Activate translation DOF on avatar to improve retargeting quality.\n\t'Shoulder_L_jnt'
+      has translation animation that will be discarded.\n\t'Shoulder_R_jnt1' has
+      translation animation that will be discarded.\n\t'Pelvis_C_jnt' has translation
+      animation that will be discarded.\n\t'Pelvis_C_jnt' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\t'Hip_L_jnt' has translation
+      animation that will be discarded.\n\t'Hip_R_jnt' has translation animation
+      that will be discarded.\n\nClip 'FG_Emote_Chicken_A' has import animation warnings
+      that might lower retargeting quality:\nNote: Activate translation DOF on avatar
+      to improve retargeting quality.\n\t'Chest_C_jnt' has translation animation
+      that will be discarded.\n\t'Head_C_jnt01' has translation animation that will
+      be discarded.\n\t'Head_C_jnt01' has scale animation that will be discarded.\n\t'Eye_L_jnt'
+      has scale animation that will be discarded.\n\t'Eye_R_jnt' has scale animation
+      that will be discarded.\n\t'Shoulder_L_jnt' has translation animation that
+      will be discarded.\n\t'Shoulder_R_jnt1' has translation animation that will
+      be discarded.\n\t'Pelvis_C_jnt' has translation animation that will be discarded.\n\t'Pelvis_C_jnt'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Hip_L_jnt'
+      has translation animation that will be discarded.\n\t'Ball_L_jnt' is inbetween
+      humanoid transforms and has rotation animation that will be discarded.\n\t'Hip_R_jnt'
+      has translation animation that will be discarded.\n\t'Ball_R_jnt' is inbetween
+      humanoid transforms and has rotation animation that will be discarded.\n\nClip
+      'FG_Emote_Wave_A' has import animation warnings that might lower retargeting
+      quality:\nNote: Activate translation DOF on avatar to improve retargeting quality.\n\t'Chest_C_jnt'
+      has translation animation that will be discarded.\n\t'Head_C_jnt01' has translation
+      animation that will be discarded.\n\t'Shoulder_L_jnt' has translation animation
+      that will be discarded.\n\t'Shoulder_R_jnt1' has translation animation that
+      will be discarded.\n\t'Pelvis_C_jnt' has translation animation that will be
+      discarded.\n\t'Pelvis_C_jnt' is inbetween humanoid transforms and has rotation
+      animation that will be discarded.\n\t'Hip_L_jnt' has translation animation
+      that will be discarded.\n\t'Ball_L_jnt' is inbetween humanoid transforms and
+      has rotation animation that will be discarded.\n\t'Hip_R_jnt' has translation
+      animation that will be discarded.\n\t'Ball_R_jnt' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\nClip 'FG_Emote_Neener_A'
+      has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'Chest_C_jnt'
+      has translation animation that will be discarded.\n\t'Head_C_jnt01' has translation
+      animation that will be discarded.\n\t'Head_C_jnt01' has scale animation that
+      will be discarded.\n\t'Eye_L_jnt' has scale animation that will be discarded.\n\t'Eye_R_jnt'
+      has scale animation that will be discarded.\n\t'Shoulder_L_jnt' has translation
+      animation that will be discarded.\n\t'Shoulder_R_jnt1' has translation animation
+      that will be discarded.\n\t'Pelvis_C_jnt' has translation animation that will
+      be discarded.\n\t'Pelvis_C_jnt' is inbetween humanoid transforms and has rotation
+      animation that will be discarded.\n\t'Hip_L_jnt' has translation animation
+      that will be discarded.\n\t'Ball_L_jnt' is inbetween humanoid transforms and
+      has rotation animation that will be discarded.\n\t'Hip_R_jnt' has translation
+      animation that will be discarded.\n\t'Ball_R_jnt' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\nClip 'FG_Emote_ThumbsUp_A'
+      has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'Chest_C_jnt'
+      has translation animation that will be discarded.\n\t'Head_C_jnt01' has translation
+      animation that will be discarded.\n\t'Head_C_jnt01' has scale animation that
+      will be discarded.\n\t'Eye_L_jnt' has scale animation that will be discarded.\n\t'Eye_R_jnt'
+      has scale animation that will be discarded.\n\t'Shoulder_L_jnt' has translation
+      animation that will be discarded.\n\t'Shoulder_R_jnt1' has translation animation
+      that will be discarded.\n\t'Pelvis_C_jnt' has translation animation that will
+      be discarded.\n\t'Pelvis_C_jnt' is inbetween humanoid transforms and has rotation
+      animation that will be discarded.\n\t'Ball_L_jnt' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\t'Ball_R_jnt' is inbetween
+      humanoid transforms and has rotation animation that will be discarded.\n\nClip
+      'FG_Emote_WaveOverHead_A' has import animation warnings that might lower retargeting
+      quality:\nNote: Activate translation DOF on avatar to improve retargeting quality.\n\t'Chest_C_jnt'
+      has translation animation that will be discarded.\n\t'Head_C_jnt01' has translation
+      animation that will be discarded.\n\t'Shoulder_L_jnt' has translation animation
+      that will be discarded.\n\t'Shoulder_R_jnt1' has translation animation that
+      will be discarded.\n\t'Pelvis_C_jnt' has translation animation that will be
+      discarded.\n\t'Pelvis_C_jnt' is inbetween humanoid transforms and has rotation
+      animation that will be discarded.\n\t'Hip_L_jnt' has translation animation
+      that will be discarded.\n\t'Ball_L_jnt' is inbetween humanoid transforms and
+      has rotation animation that will be discarded.\n\t'Hip_R_jnt' has translation
+      animation that will be discarded.\n\t'Ball_R_jnt' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\nClip 'FG_Emote_PirateDance_A'
+      has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'Chest_C_jnt'
+      has translation animation that will be discarded.\n\t'Head_C_jnt01' has translation
+      animation that will be discarded.\n\t'Head_C_jnt01' has scale animation that
+      will be discarded.\n\t'Eye_L_jnt' has scale animation that will be discarded.\n\t'Eye_R_jnt'
+      has scale animation that will be discarded.\n\t'Shoulder_L_jnt' has translation
+      animation that will be discarded.\n\t'Pelvis_C_jnt' has translation animation
+      that will be discarded.\n\t'Pelvis_C_jnt' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\t'Hip_L_jnt' has translation
+      animation that will be discarded.\n\t'Ball_L_jnt' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\t'Hip_R_jnt' has translation
+      animation that will be discarded.\n\t'Ball_R_jnt' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\nClip 'FG_Emote_slowclap_A'
+      has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'Chest_C_jnt'
+      has translation animation that will be discarded.\n\t'Head_C_jnt01' has translation
+      animation that will be discarded.\n\t'Eye_L_jnt' has scale animation that will
+      be discarded.\n\t'Eye_R_jnt' has scale animation that will be discarded.\n\t'Shoulder_L_jnt'
+      has translation animation that will be discarded.\n\t'Shoulder_R_jnt1' has
+      translation animation that will be discarded.\n\t'Finger01_R_jnt_04' has translation
+      animation that will be discarded.\n\t'Finger02_R_jnt_04' has translation animation
+      that will be discarded.\n\t'Pelvis_C_jnt' has translation animation that will
+      be discarded.\n\t'Pelvis_C_jnt' is inbetween humanoid transforms and has rotation
+      animation that will be discarded.\n\t'Hip_L_jnt' has translation animation
+      that will be discarded.\n\t'Ball_L_jnt' is inbetween humanoid transforms and
+      has rotation animation that will be discarded.\n\nClip 'FG_Emote_RobotDance_A'
+      has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'Chest_C_jnt'
+      has translation animation that will be discarded.\n\t'Head_C_jnt01' has translation
+      animation that will be discarded.\n\t'Shoulder_L_jnt' has translation animation
+      that will be discarded.\n\t'Finger02_L_jnt_02' has translation animation that
+      will be discarded.\n\t'Shoulder_R_jnt1' has translation animation that will
+      be discarded.\n\t'Finger01_R_jnt_04' has translation animation that will be
+      discarded.\n\t'Pelvis_C_jnt' has translation animation that will be discarded.\n\t'Pelvis_C_jnt'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Hip_L_jnt'
+      has translation animation that will be discarded.\n\t'Ball_L_jnt' is inbetween
+      humanoid transforms and has rotation animation that will be discarded.\n\t'Hip_R_jnt'
+      has translation animation that will be discarded.\n\t'Ball_R_jnt' is inbetween
+      humanoid transforms and has rotation animation that will be discarded.\n\nClip
+      'CH_Fallguy_FG_Emote_Mexwave' has import animation warnings that might lower
+      retargeting quality:\nNote: Activate translation DOF on avatar to improve retargeting
+      quality.\n\t'Chest_C_jnt' has translation animation that will be discarded.\n\t'Shoulder_L_jnt'
+      has translation animation that will be discarded.\n\t'Shoulder_R_jnt1' has
+      translation animation that will be discarded.\n\t'Pelvis_C_jnt' has translation
+      animation that will be discarded.\n\t'Pelvis_C_jnt' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\t'Hip_L_jnt' has translation
+      animation that will be discarded.\n\t'Ball_L_jnt' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\t'Hip_R_jnt' has translation
+      animation that will be discarded.\n\t'Ball_R_jnt' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\nClip 'CH_Fallguy_FG_emote_HappyClap'
+      has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'Chest_C_jnt'
+      has translation animation that will be discarded.\n\t'Head_C_jnt01' has scale
+      animation that will be discarded.\n\t'Eye_L_jnt' has scale animation that will
+      be discarded.\n\t'Eye_R_jnt' has scale animation that will be discarded.\n\t'Shoulder_L_jnt'
+      has translation animation that will be discarded.\n\t'Shoulder_R_jnt1' has
+      translation animation that will be discarded.\n\t'Finger02_R_jnt_04' has translation
+      animation that will be discarded.\n\t'Pelvis_C_jnt' has translation animation
+      that will be discarded.\n\t'Pelvis_C_jnt' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\t'Hip_L_jnt' has translation
+      animation that will be discarded.\n\t'Ball_L_jnt' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\t'Hip_R_jnt' has translation
+      animation that will be discarded.\n\t'Ball_R_jnt' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\nClip 'FG_Beefcake_A'
+      has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'Chest_C_jnt'
+      has translation animation that will be discarded.\n\t'Eye_L_jnt' has scale
+      animation that will be discarded.\n\t'Eye_R_jnt' has scale animation that will
+      be discarded.\n\t'Shoulder_L_jnt' has translation animation that will be discarded.\n\t'Shoulder_R_jnt1'
+      has translation animation that will be discarded.\n\t'Pelvis_C_jnt' has translation
+      animation that will be discarded.\n\t'Pelvis_C_jnt' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\t'Hip_L_jnt' has translation
+      animation that will be discarded.\n\t'Ball_L_jnt' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\t'Hip_R_jnt' has translation
+      animation that will be discarded.\n\t'Ball_R_jnt' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\nClip 'FG_Emote_Zsnap_A'
+      has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'Head_C_jnt01'
+      has translation animation that will be discarded.\n\t'Shoulder_R_jnt1' has
+      translation animation that will be discarded.\n\t'Pelvis_C_jnt' has translation
+      animation that will be discarded.\n\t'Pelvis_C_jnt' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\t'Ball_L_jnt' is inbetween
+      humanoid transforms and has rotation animation that will be discarded.\n\nClip
+      'FG_Emote_Pattycake_A' has import animation warnings that might lower retargeting
+      quality:\nNote: Activate translation DOF on avatar to improve retargeting quality.\n\t'Chest_C_jnt'
+      has translation animation that will be discarded.\n\t'Head_C_jnt01' has translation
+      animation that will be discarded.\n\t'Eye_L_jnt' has scale animation that will
+      be discarded.\n\t'Eye_R_jnt' has scale animation that will be discarded.\n\t'Shoulder_L_jnt'
+      has translation animation that will be discarded.\n\t'Shoulder_R_jnt1' has
+      translation animation that will be discarded.\n\t'Pelvis_C_jnt' has translation
+      animation that will be discarded.\n\t'Pelvis_C_jnt' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\t'Hip_L_jnt' has translation
+      animation that will be discarded.\n\t'Ball_L_jnt' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\t'Hip_R_jnt' has translation
+      animation that will be discarded.\n\t'Ball_R_jnt' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\nClip 'FG_Emote_Armthrow_A'
+      has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'Chest_C_jnt'
+      has translation animation that will be discarded.\n\t'Head_C_jnt01' has translation
+      animation that will be discarded.\n\t'Eye_L_jnt' has scale animation that will
+      be discarded.\n\t'Eye_R_jnt' has scale animation that will be discarded.\n\t'Shoulder_L_jnt'
+      has translation animation that will be discarded.\n\t'Shoulder_R_jnt1' has
+      translation animation that will be discarded.\n\t'Pelvis_C_jnt' has translation
+      animation that will be discarded.\n\t'Pelvis_C_jnt' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\t'Hip_L_jnt' has translation
+      animation that will be discarded.\n\t'Ball_L_jnt' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\t'Hip_R_jnt' has translation
+      animation that will be discarded.\n\t'Ball_R_jnt' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\nClip 'FG_emote_boxing_01_A'
+      has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'Chest_C_jnt'
+      has translation animation that will be discarded.\n\t'Eye_L_jnt' has scale
+      animation that will be discarded.\n\t'Eye_R_jnt' has scale animation that will
+      be discarded.\n\t'Shoulder_L_jnt' has translation animation that will be discarded.\n\t'Shoulder_R_jnt1'
+      has translation animation that will be discarded.\n\t'Pelvis_C_jnt' has translation
+      animation that will be discarded.\n\t'Pelvis_C_jnt' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\t'Hip_L_jnt' has translation
+      animation that will be discarded.\n\t'Ball_L_jnt' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\t'Hip_R_jnt' has translation
+      animation that will be discarded.\n\t'Ball_R_jnt' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\nClip 'FG_emote_ChestBump_01_A'
+      has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'Chest_C_jnt'
+      has translation animation that will be discarded.\n\t'Head_C_jnt01' has translation
+      animation that will be discarded.\n\t'Shoulder_L_jnt' has translation animation
+      that will be discarded.\n\t'Shoulder_R_jnt1' has translation animation that
+      will be discarded.\n\t'Pelvis_C_jnt' has translation animation that will be
+      discarded.\n\t'Pelvis_C_jnt' is inbetween humanoid transforms and has rotation
+      animation that will be discarded.\n\t'Hip_L_jnt' has translation animation
+      that will be discarded.\n\t'Ball_L_jnt' is inbetween humanoid transforms and
+      has rotation animation that will be discarded.\n\t'Hip_R_jnt' has translation
+      animation that will be discarded.\n\t'Ball_R_jnt' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\nClip 'FG_emote_Salute_01_A'
+      has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'Chest_C_jnt'
+      has translation animation that will be discarded.\n\t'Head_C_jnt01' has translation
+      animation that will be discarded.\n\t'Eye_L_jnt' has scale animation that will
+      be discarded.\n\t'Eye_R_jnt' has scale animation that will be discarded.\n\t'Shoulder_L_jnt'
+      has translation animation that will be discarded.\n\t'Shoulder_R_jnt1' has
+      translation animation that will be discarded.\n\t'Pelvis_C_jnt' has translation
+      animation that will be discarded.\n\t'Pelvis_C_jnt' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\t'Hip_L_jnt' has translation
+      animation that will be discarded.\n\t'Ball_L_jnt' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\t'Hip_R_jnt' has translation
+      animation that will be discarded.\n\nClip 'FG_emote_horsey_A' has import animation
+      warnings that might lower retargeting quality:\nNote: Activate translation
+      DOF on avatar to improve retargeting quality.\n\t'Chest_C_jnt' has translation
+      animation that will be discarded.\n\t'Head_C_jnt01' has translation animation
+      that will be discarded.\n\t'Head_C_jnt01' has scale animation that will be
+      discarded.\n\t'Shoulder_L_jnt' has translation animation that will be discarded.\n\t'Shoulder_R_jnt1'
+      has translation animation that will be discarded.\n\t'Pelvis_C_jnt' has translation
+      animation that will be discarded.\n\t'Pelvis_C_jnt' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\t'Hip_L_jnt' has translation
+      animation that will be discarded.\n\t'Ball_L_jnt' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\t'Hip_R_jnt' has translation
+      animation that will be discarded.\n\t'Ball_R_jnt' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\nClip 'FG_emote_Jester_A'
+      has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'Chest_C_jnt'
+      has translation animation that will be discarded.\n\t'Head_C_jnt01' has translation
+      animation that will be discarded.\n\t'Head_C_jnt01' has scale animation that
+      will be discarded.\n\t'Shoulder_L_jnt' has translation animation that will
+      be discarded.\n\t'Shoulder_R_jnt1' has translation animation that will be discarded.\n\t'Pelvis_C_jnt'
+      has translation animation that will be discarded.\n\t'Pelvis_C_jnt' is inbetween
+      humanoid transforms and has rotation animation that will be discarded.\n\t'Hip_L_jnt'
+      has translation animation that will be discarded.\n\t'Ball_L_jnt' is inbetween
+      humanoid transforms and has rotation animation that will be discarded.\n\t'Hip_R_jnt'
+      has translation animation that will be discarded.\n\t'Ball_R_jnt' is inbetween
+      humanoid transforms and has rotation animation that will be discarded.\n\nClip
+      'FG_emote_Curtsy_A' has import animation warnings that might lower retargeting
+      quality:\nNote: Activate translation DOF on avatar to improve retargeting quality.\n\t'Chest_C_jnt'
+      has translation animation that will be discarded.\n\t'Head_C_jnt01' has translation
+      animation that will be discarded.\n\t'Head_C_jnt01' has scale animation that
+      will be discarded.\n\t'Eye_L_jnt' has scale animation that will be discarded.\n\t'Eye_R_jnt'
+      has scale animation that will be discarded.\n\t'Shoulder_L_jnt' has translation
+      animation that will be discarded.\n\t'Shoulder_R_jnt1' has translation animation
+      that will be discarded.\n\t'Pelvis_C_jnt' has translation animation that will
+      be discarded.\n\t'Pelvis_C_jnt' is inbetween humanoid transforms and has rotation
+      animation that will be discarded.\n\t'Hip_L_jnt' has translation animation
+      that will be discarded.\n\t'Hip_R_jnt' has translation animation that will
+      be discarded.\n\t'Ball_R_jnt' is inbetween humanoid transforms and has rotation
+      animation that will be discarded.\n\nClip 'FG_emote_Bow_A' has import animation
+      warnings that might lower retargeting quality:\nNote: Activate translation
+      DOF on avatar to improve retargeting quality.\n\t'Chest_C_jnt' has translation
+      animation that will be discarded.\n\t'Head_C_jnt01' has translation animation
+      that will be discarded.\n\t'Shoulder_L_jnt' has translation animation that
+      will be discarded.\n\t'Shoulder_R_jnt1' has translation animation that will
+      be discarded.\n\t'Pelvis_C_jnt' has translation animation that will be discarded.\n\t'Pelvis_C_jnt'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Hip_L_jnt'
+      has translation animation that will be discarded.\n\t'Ball_L_jnt' is inbetween
+      humanoid transforms and has rotation animation that will be discarded.\n\t'Hip_R_jnt'
+      has translation animation that will be discarded.\n\t'Ball_R_jnt' is inbetween
+      humanoid transforms and has rotation animation that will be discarded.\n\nClip
+      'FG_emote_comeon_01_A' has import animation warnings that might lower retargeting
+      quality:\nNote: Activate translation DOF on avatar to improve retargeting quality.\n\t'Chest_C_jnt'
+      has translation animation that will be discarded.\n\t'Head_C_jnt01' has translation
+      animation that will be discarded.\n\t'Shoulder_L_jnt' has translation animation
+      that will be discarded.\n\t'Shoulder_R_jnt1' has translation animation that
+      will be discarded.\n\t'Pelvis_C_jnt' has translation animation that will be
+      discarded.\n\t'Pelvis_C_jnt' is inbetween humanoid transforms and has rotation
+      animation that will be discarded.\n\t'Ball_L_jnt' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\t'Hip_R_jnt' has translation
+      animation that will be discarded.\n\t'Ball_R_jnt' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\nClip 'FG_emote_HONK_01_A'
+      has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'Chest_C_jnt'
+      has translation animation that will be discarded.\n\t'Head_C_jnt01' has translation
+      animation that will be discarded.\n\t'Head_C_jnt01' has scale animation that
+      will be discarded.\n\t'Eye_L_jnt' has scale animation that will be discarded.\n\t'Eye_R_jnt'
+      has scale animation that will be discarded.\n\t'Shoulder_L_jnt' has translation
+      animation that will be discarded.\n\t'Shoulder_R_jnt1' has translation animation
+      that will be discarded.\n\t'Pelvis_C_jnt' has translation animation that will
+      be discarded.\n\t'Pelvis_C_jnt' is inbetween humanoid transforms and has rotation
+      animation that will be discarded.\n\t'Hip_L_jnt' has translation animation
+      that will be discarded.\n\t'Ball_L_jnt' is inbetween humanoid transforms and
+      has rotation animation that will be discarded.\n\t'Hip_R_jnt' has translation
+      animation that will be discarded.\n\t'Ball_R_jnt' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\nClip 'ArmWave_Start'
+      has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'Shoulder_L_jnt'
+      has translation animation that will be discarded.\n\t'Shoulder_R_jnt1' has
+      translation animation that will be discarded.\n\t'Pelvis_C_jnt' has translation
+      animation that will be discarded.\n\t'Pelvis_C_jnt' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\t'Hip_L_jnt' has translation
+      animation that will be discarded.\n\t'Ball_L_jnt' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\t'Ball_R_jnt' is inbetween
+      humanoid transforms and has rotation animation that will be discarded.\n\nClip
+      'ArmWave_Loop' has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'Shoulder_L_jnt'
+      has translation animation that will be discarded.\n\t'Shoulder_R_jnt1' has
+      translation animation that will be discarded.\n\t'Pelvis_C_jnt' has translation
+      animation that will be discarded.\n\t'Pelvis_C_jnt' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\t'Hip_L_jnt' has translation
+      animation that will be discarded.\n\t'Ball_L_jnt' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\t'Hip_R_jnt' has translation
+      animation that will be discarded.\n\t'Ball_R_jnt' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\nClip 'ArmWave_End' has
+      import animation warnings that might lower retargeting quality:\nNote: Activate
+      translation DOF on avatar to improve retargeting quality.\n\t'Chest_C_jnt'
+      has translation animation that will be discarded.\n\t'Head_C_jnt01' has translation
+      animation that will be discarded.\n\t'Shoulder_L_jnt' has translation animation
+      that will be discarded.\n\t'Shoulder_R_jnt1' has translation animation that
+      will be discarded.\n\t'Pelvis_C_jnt' has translation animation that will be
+      discarded.\n\t'Pelvis_C_jnt' is inbetween humanoid transforms and has rotation
+      animation that will be discarded.\n\t'Hip_L_jnt' has translation animation
+      that will be discarded.\n\t'Ball_L_jnt' is inbetween humanoid transforms and
+      has rotation animation that will be discarded.\n\t'Hip_R_jnt' has translation
+      animation that will be discarded.\n\t'Ball_R_jnt' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n"
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: FG_Loading_Falling_A
+      takeName: FG_Loading_Falling_A
+      internalID: 5588447541525286609
+      firstFrame: 0
+      lastFrame: 113
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: FG_Idle_A
+      takeName: FG_Idle_A
+      internalID: -1350731474737610640
+      firstFrame: 0
+      lastFrame: 300
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: FG_Walk_Right_A
+      takeName: FG_Walk_Right_A
+      internalID: 8540488570579240840
+      firstFrame: 0
+      lastFrame: 300
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: FG_Walk_Left_A
+      takeName: FG_Walk_Left_A
+      internalID: 5016917786963033396
+      firstFrame: 0
+      lastFrame: 300
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: FG_Walk_A
+      takeName: FG_Walk_A
+      internalID: 6641285207873296215
+      firstFrame: 0
+      lastFrame: 300
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: FG_CostumeChangeLooking_A
+      takeName: FG_CostumeChangeLooking_A
+      internalID: 9116023571871170977
+      firstFrame: 0
+      lastFrame: 300
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: FG_Idle_Joggingonspot
+      takeName: FG_Idle_Joggingonspot
+      internalID: 7960399557851355106
+      firstFrame: 0
+      lastFrame: 300
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: FG_Idle_TouchingToes
+      takeName: FG_Idle_TouchingToes
+      internalID: -5983188243843139032
+      firstFrame: 0
+      lastFrame: 300
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: FG_Emote_Chicken_A
+      takeName: FG_Emote_Chicken_A
+      internalID: 7187400535178724301
+      firstFrame: 0
+      lastFrame: 300
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: FG_Emote_Wave_A
+      takeName: FG_Emote_Wave_A
+      internalID: 526006914123607298
+      firstFrame: 0
+      lastFrame: 300
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: FG_Emote_Neener_A
+      takeName: FG_Emote_Neener_A
+      internalID: 2133258939585667911
+      firstFrame: 0
+      lastFrame: 300
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: FG_Emote_ThumbsUp_A
+      takeName: FG_Emote_ThumbsUp_A
+      internalID: -4527647147526023915
+      firstFrame: 0
+      lastFrame: 300
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: FG_Emote_WaveOverHead_A
+      takeName: FG_Emote_WaveOverHead_A
+      internalID: 2270286033508236550
+      firstFrame: 0
+      lastFrame: 300
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: FG_Emote_PirateDance_A
+      takeName: FG_Emote_PirateDance_A
+      internalID: 3592587521371947791
+      firstFrame: 0
+      lastFrame: 300
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: FG_Emote_slowclap_A
+      takeName: FG_Emote_slowclap_A
+      internalID: 6156902771286847519
+      firstFrame: 0
+      lastFrame: 300
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: FG_Emote_RobotDance_A
+      takeName: FG_Emote_RobotDance_A
+      internalID: 8375050315777882955
+      firstFrame: 0
+      lastFrame: 300
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: CH_Fallguy_FG_Emote_Mexwave
+      takeName: CH_Fallguy_FG_Emote_Mexwave
+      internalID: -2746488339373379492
+      firstFrame: 0
+      lastFrame: 300
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: CH_Fallguy_FG_emote_HappyClap
+      takeName: CH_Fallguy_FG_emote_HappyClap
+      internalID: 7149610348155728239
+      firstFrame: 0
+      lastFrame: 300
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: FG_Beefcake_A
+      takeName: FG_Beefcake_A
+      internalID: -1406449806323929923
+      firstFrame: 0
+      lastFrame: 300
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: FG_Emote_Zsnap_A
+      takeName: FG_Emote_Zsnap_A
+      internalID: -3250724228466655020
+      firstFrame: 0
+      lastFrame: 300
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: FG_Emote_Pattycake_A
+      takeName: FG_Emote_Pattycake_A
+      internalID: 4750524011340929224
+      firstFrame: 0
+      lastFrame: 300
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: FG_Emote_Armthrow_A
+      takeName: FG_Emote_Armthrow_A
+      internalID: 3241454174637189745
+      firstFrame: 0
+      lastFrame: 300
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: FG_emote_boxing_01_A
+      takeName: FG_emote_boxing_01_A
+      internalID: -8726136059806773303
+      firstFrame: 0
+      lastFrame: 300
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: FG_emote_ChestBump_01_A
+      takeName: FG_emote_ChestBump_01_A
+      internalID: -4172729066700134712
+      firstFrame: 0
+      lastFrame: 300
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: FG_emote_Salute_01_A
+      takeName: FG_emote_Salute_01_A
+      internalID: -4637230680114573308
+      firstFrame: 0
+      lastFrame: 300
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: FG_emote_horsey_A
+      takeName: FG_emote_horsey_A
+      internalID: 6929537906209518576
+      firstFrame: 0
+      lastFrame: 300
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: FG_emote_Jester_A
+      takeName: FG_emote_Jester_A
+      internalID: 8910212562662938950
+      firstFrame: 0
+      lastFrame: 300
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: FG_emote_Curtsy_A
+      takeName: FG_emote_Curtsy_A
+      internalID: -5048073515431488922
+      firstFrame: 0
+      lastFrame: 300
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: FG_emote_Bow_A
+      takeName: FG_emote_Bow_A
+      internalID: -4605700921268072197
+      firstFrame: 0
+      lastFrame: 300
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: FG_emote_comeon_01_A
+      takeName: FG_emote_comeon_01_A
+      internalID: -2879790551942367623
+      firstFrame: 0
+      lastFrame: 300
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: FG_emote_HONK_01_A
+      takeName: FG_emote_HONK_01_A
+      internalID: -8291614301884386334
+      firstFrame: 0
+      lastFrame: 300
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: ArmWave_Start
+      takeName: ArmWave_Start
+      internalID: 7270982731675219257
+      firstFrame: 0
+      lastFrame: 300
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: ArmWave_Loop
+      takeName: ArmWave_Loop
+      internalID: 9194337613697835173
+      firstFrame: 0
+      lastFrame: 300
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: ArmWave_End
+      takeName: ArmWave_End
+      internalID: 5714302934853201059
+      firstFrame: 0
+      lastFrame: 300
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human:
+    - boneName: Torso_C_jnt_NoStrechSquash
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Hip_L_jnt
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Hip_R_jnt
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Knee_L_jnt
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Knee_R_jnt
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Ankle_L_jnt
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Ankle_R_jnt
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Chest_C_jnt
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Head_C_jnt01
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Shoulder_L_jnt
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Shoulder_R_jnt1
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Elbow_L_jnt
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Elbow_R_jnt1
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Wrist_L_jnt
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Wrist_R_jnt1
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Toe_L_jnt
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Toe_R_jnt
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Eye_L_jnt
+      humanName: LeftEye
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Eye_R_jnt
+      humanName: RightEye
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Thumb_L_jnt_01
+      humanName: Left Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Thumb_L_jnt_02
+      humanName: Left Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Finger02_L_jnt_01
+      humanName: Left Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Finger02_L_jnt_02
+      humanName: Left Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Finger01_L_jnt_01
+      humanName: Left Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Finger01_L_jnt_02
+      humanName: Left Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Thumb_R_jnt_03
+      humanName: Right Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Thumb_R_jnt_04
+      humanName: Right Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Finger02_R_jnt_03
+      humanName: Right Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Finger02_R_jnt_04
+      humanName: Right Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Finger01_R_jnt_03
+      humanName: Right Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Finger01_R_jnt_04
+      humanName: Right Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: PB_UI_Character(Clone)
+      parentName: 
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SKELETON
+      parentName: PB_UI_Character(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Root
+      parentName: SKELETON
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Torso_C_jnt_NoStrechSquash
+      parentName: Root
+      position: {x: -0, y: 0.003566626, z: 0.0035997762}
+      rotation: {x: -0.13914739, y: -0.04487248, z: -0.0020667496, w: 0.9892524}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Pelvis_C_jnt
+      parentName: Torso_C_jnt_NoStrechSquash
+      position: {x: -8.881784e-20, y: -0.003553436, z: -0.000667808}
+      rotation: {x: -0.60111505, y: 0.03026768, z: 0.033190325, w: 0.7978992}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: Hip_R_jnt
+      parentName: Pelvis_C_jnt
+      position: {x: 0.0015711199, y: -0.002117544, z: -0.0010801796}
+      rotation: {x: -0.04601344, y: 0.76023173, z: 0.6479014, w: -0.012424257}
+      scale: {x: 0.9999999, y: 0.9999999, z: 1}
+    - name: Knee_R_jnt
+      parentName: Hip_R_jnt
+      position: {x: 1.7763568e-19, y: -0.0007908633, z: -4.3956408e-10}
+      rotation: {x: -0.3008771, y: -0.0042553972, z: -0.006506056, w: 0.9536313}
+      scale: {x: 1.0000001, y: 1.0000004, z: 1}
+    - name: Ankle_R_jnt
+      parentName: Knee_R_jnt
+      position: {x: -1.7763568e-19, y: -0.00070822163, z: -0.000000004617374}
+      rotation: {x: 0.99294436, y: 0.0019601649, z: 0.04605242, w: 0.1092559}
+      scale: {x: 1.0000004, y: 1.0000001, z: 0.99999946}
+    - name: Ball_R_jnt
+      parentName: Ankle_R_jnt
+      position: {x: -0, y: -0.0012350678, z: -0.0000000049942486}
+      rotation: {x: 0.32602808, y: 5.6948835e-10, z: -0.00000000896009, w: 0.94536006}
+      scale: {x: 1.0000002, y: 1.0000002, z: 1.0000005}
+    - name: Toe_R_jnt
+      parentName: Ball_R_jnt
+      position: {x: 3.5527136e-19, y: -0.0018297447, z: 2.5782626e-10}
+      rotation: {x: -0, y: 1.6653341e-16, z: 9.159338e-16, w: 1}
+      scale: {x: 1, y: 0.99999994, z: 0.99999994}
+    - name: Hip_L_jnt
+      parentName: Pelvis_C_jnt
+      position: {x: -0.0015711162, y: -0.0021175467, z: -0.0010801796}
+      rotation: {x: -0.012424144, y: -0.64790094, z: 0.7602321, w: 0.04601336}
+      scale: {x: 1.0000005, y: 1.0000005, z: 1.0000002}
+    - name: Knee_L_jnt
+      parentName: Hip_L_jnt
+      position: {x: 1.9539925e-18, y: 0.0007908641, z: -3.5527136e-19}
+      rotation: {x: -0.30087382, y: -0.004255509, z: -0.0065061995, w: 0.95363224}
+      scale: {x: 0.9999998, y: 1.0000001, z: 1.0000004}
+    - name: Ankle_L_jnt
+      parentName: Knee_L_jnt
+      position: {x: -3.8279753e-12, y: 0.00070821523, z: 0}
+      rotation: {x: 0.992944, y: 0.0019606112, z: 0.0460523, w: 0.10925961}
+      scale: {x: 1.0000007, y: 0.9999996, z: 1.0000001}
+    - name: Ball_L_jnt
+      parentName: Ankle_L_jnt
+      position: {x: 1.7074685e-11, y: 0.0012350683, z: -1.7763568e-19}
+      rotation: {x: 0.32602814, y: -0.000000011242326, z: -0.0000000036519379, w: 0.9453601}
+      scale: {x: 1.0000001, y: 1.0000004, z: 1}
+    - name: Toe_L_jnt
+      parentName: Ball_L_jnt
+      position: {x: 3.902115e-11, y: 0.0018297434, z: 1.6875389e-18}
+      rotation: {x: -0, y: -8.881782e-16, z: 2.2204455e-16, w: 1}
+      scale: {x: 1.0000004, y: 1.0000001, z: 1.0000001}
+    - name: Chest_C_jnt
+      parentName: Torso_C_jnt_NoStrechSquash
+      position: {x: -0, y: 0.002873458, z: 1.4210854e-18}
+      rotation: {x: -0.33774847, y: 0.03874173, z: 0.022733415, w: 0.9401639}
+      scale: {x: 1, y: 0.9999999, z: 0.99999976}
+    - name: Carry
+      parentName: Chest_C_jnt
+      position: {x: -0, y: -0.00971737, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Head_C_jnt01
+      parentName: Chest_C_jnt
+      position: {x: 4.440892e-20, y: 0.0011034847, z: 0.0006017438}
+      rotation: {x: -0.007696819, y: -0.0000000058597935, z: 0.0000000050482183, w: 0.9999704}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+    - name: Head_C_nub
+      parentName: Head_C_jnt01
+      position: {x: -1.1995455e-19, y: 0.00844702, z: -0.00080750644}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Eye_R_jnt
+      parentName: Head_C_jnt01
+      position: {x: 0.0012008231, y: 0.002327971, z: 0.0038215597}
+      rotation: {x: -0.000000017229466, y: 0.0000000039928763, z: 5.704655e-10, w: 1}
+      scale: {x: 0.9999999, y: 1.0000001, z: 1.0000002}
+    - name: Eye_L_jnt
+      parentName: Head_C_jnt01
+      position: {x: -0.0012008231, y: 0.002327971, z: 0.0038215597}
+      rotation: {x: 0.007696819, y: 2.5768807e-10, z: -0.0000000032286376, w: 0.9999704}
+      scale: {x: 0.9999999, y: 1.0000001, z: 1.0000001}
+    - name: Shoulder_L_jnt
+      parentName: Chest_C_jnt
+      position: {x: -0.0048735673, y: 0.0016163024, z: 0.00078606745}
+      rotation: {x: -0.50433123, y: 0.49563095, z: 0.51512027, w: 0.484408}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1.0000001}
+    - name: Elbow_L_jnt
+      parentName: Shoulder_L_jnt
+      position: {x: -1.5645578e-19, y: 0.0034572145, z: -1.4022116e-17}
+      rotation: {x: 0.014471382, y: 0.0013075322, z: 0.026006475, w: 0.9995562}
+      scale: {x: 1.0000004, y: 0.9999999, z: 1.0000001}
+    - name: Wrist_L_jnt
+      parentName: Elbow_L_jnt
+      position: {x: -1.9539925e-18, y: 0.0027322515, z: -4.263256e-18}
+      rotation: {x: -0.026796963, y: 0.0060078604, z: -0.027227854, w: 0.999252}
+      scale: {x: 0.9999996, y: 1, z: 0.9999999}
+    - name: Thumb_L_jnt_01
+      parentName: Wrist_L_jnt
+      position: {x: -0.00160848, y: 0.0015103541, z: -0.0002490368}
+      rotation: {x: -0.17704876, y: -0.21427542, z: 0.3132873, w: 0.9080699}
+      scale: {x: 1.0000001, y: 1, z: 1}
+    - name: Thumb_L_jnt_02
+      parentName: Thumb_L_jnt_01
+      position: {x: -1.563194e-16, y: 0.00062855077, z: -5.144329e-16}
+      rotation: {x: -0.08288128, y: -0.012693959, z: 0.020064658, w: 0.99627656}
+      scale: {x: 1, y: 1.0000001, z: 0.9999999}
+    - name: Finger01_L_jnt_01
+      parentName: Wrist_L_jnt
+      position: {x: -0.00080422894, y: 0.0026761496, z: 0.0002751955}
+      rotation: {x: -0.006736667, y: -0.0326735, z: 0.060509574, w: 0.99761}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+    - name: Finger01_L_jnt_02
+      parentName: Finger01_L_jnt_01
+      position: {x: -1.7763567e-18, y: 0.0006452214, z: 1.4210854e-18}
+      rotation: {x: -0.073190935, y: 0.027330248, z: -0.0094546145, w: 0.99689865}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Finger02_L_jnt_01
+      parentName: Wrist_L_jnt
+      position: {x: 0.0009785807, y: 0.002411365, z: 0.00006262777}
+      rotation: {x: 0.014915036, y: -0.08989473, z: 0.070792556, w: -0.9933201}
+      scale: {x: 0.9999999, y: 1.0000001, z: 1}
+    - name: Finger02_L_jnt_02
+      parentName: Finger02_L_jnt_01
+      position: {x: -3.5527134e-18, y: 0.0005325808, z: 1.4210854e-18}
+      rotation: {x: -0.053492513, y: -0.0017183418, z: -0.0040673087, w: 0.99855846}
+      scale: {x: 1.0000002, y: 1, z: 1.0000001}
+    - name: Shoulder_R_jnt1
+      parentName: Chest_C_jnt
+      position: {x: 0.0048735696, y: 0.0016163297, z: 0.000786068}
+      rotation: {x: 0.4844079, y: -0.5151204, z: 0.49563092, w: 0.50433123}
+      scale: {x: 1.0000001, y: 1.0000004, z: 1.0000004}
+    - name: Elbow_R_jnt1
+      parentName: Shoulder_R_jnt1
+      position: {x: -8.07965e-10, y: -0.0034572124, z: -0.0000000069665425}
+      rotation: {x: -0.014480352, y: -0.0013066233, z: -0.026004747, w: -0.9995561}
+      scale: {x: 0.99999994, y: 1.0000001, z: 1.0000005}
+    - name: Wrist_R_jnt1
+      parentName: Elbow_R_jnt1
+      position: {x: 7.830005e-11, y: -0.0027322485, z: 0.00000005963333}
+      rotation: {x: -0.026796909, y: 0.0060079363, z: -0.027227703, w: 0.999252}
+      scale: {x: 1.0000002, y: 1.0000001, z: 0.99999994}
+    - name: Thumb_R_jnt_03
+      parentName: Wrist_R_jnt1
+      position: {x: 0.0016084808, y: -0.0015103526, z: 0.00024901534}
+      rotation: {x: -0.17706835, y: -0.21428272, z: 0.31328067, w: 0.90806663}
+      scale: {x: 0.9999997, y: 0.99999994, z: 0.9999998}
+    - name: Thumb_R_jnt_04
+      parentName: Thumb_R_jnt_03
+      position: {x: 0.000000004426118, y: -0.0006285387, z: -0.00000002128943}
+      rotation: {x: -0.08288129, y: -0.012693939, z: 0.02006458, w: 0.9962766}
+      scale: {x: 1.0000005, y: 1.0000004, z: 1.0000005}
+    - name: Finger01_R_jnt_03
+      parentName: Wrist_R_jnt1
+      position: {x: 0.00080423977, y: -0.0026761135, z: -0.00027520664}
+      rotation: {x: -0.006763685, y: -0.032673396, z: 0.060539577, w: 0.99760795}
+      scale: {x: 0.99999994, y: 1, z: 1.0000001}
+    - name: Finger01_R_jnt_04
+      parentName: Finger01_R_jnt_03
+      position: {x: -0.000000027349817, y: -0.0006452605, z: -0.000000042056303}
+      rotation: {x: -0.0731909, y: 0.027330136, z: -0.009454541, w: 0.9968986}
+      scale: {x: 0.9999998, y: 1, z: 0.99999994}
+    - name: Finger02_R_jnt_03
+      parentName: Wrist_R_jnt1
+      position: {x: -0.0009785763, y: -0.0024113585, z: -0.000062691484}
+      rotation: {x: 0.014890119, y: -0.089896694, z: 0.07077975, w: -0.99332124}
+      scale: {x: 0.9999999, y: 0.99999994, z: 0.99999994}
+    - name: Finger02_R_jnt_04
+      parentName: Finger02_R_jnt_03
+      position: {x: -0.000000007471468, y: -0.0005326164, z: 0.000000047865974}
+      rotation: {x: -0.053492572, y: -0.0017182822, z: -0.0040671392, w: 0.99855846}
+      scale: {x: 1, y: 0.99999994, z: 0.99999994}
+    - name: Torso_C_jnt
+      parentName: Torso_C_jnt_NoStrechSquash
+      position: {x: -4.440892e-20, y: 0, z: 3.5527136e-19}
+      rotation: {x: -0.60111505, y: 0.030267676, z: 0.033190325, w: 0.7978992}
+      scale: {x: 1, y: 1, z: 0.9999999}
+    - name: GEO
+      parentName: PB_UI_Character(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Body
+      parentName: GEO
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftPoleTarget
+      parentName: PB_UI_Character(Clone)
+      position: {x: -0.0064, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightRoleTarget
+      parentName: PB_UI_Character(Clone)
+      position: {x: 0.0064, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 3
+  humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 870f6910458cac94cb944c55ce9d288b
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 196526
+  packageName: Starter Assets - ThirdPerson | Updates in new CharacterController
+    package
+  packageVersion: 1.1.5
+  assetPath: Assets/3rdParty/Dias Games/Third Person System/Animations/StarterAssetsThirdPerson.controller
+  uploadId: 691128
