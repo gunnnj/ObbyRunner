@@ -7,6 +7,10 @@ TagManager:
   - LedgeLimit
   - Ladder
   - JumpTrigger
+  - CinemachineTarget
+  - Slip
+  - Checkpoint
+  - Bounce
   layers:
   - Default
   - TransparentFX
@@ -15,8 +19,8 @@ TagManager:
   - Water
   - UI
   - Ground
-  - 
-  - 
+  - Slip
+  - NavMeshLink
   - 
   - 
   - 

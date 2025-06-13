@@ -1,13 +1,12 @@
 using System;
-using System.Collections;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMoveVirtualCam : MonoBehaviour
 {
-    [SerializeField] float speed = 4f;
-    // [SerializeField] float rotateSpeed = 10f;
+    [SerializeField] float speed = 5f;
+    [SerializeField] float rotateSpeed = 10f;
     [SerializeField] float checkDistance = 0.1f;
-    [SerializeField] float jumpForce = 20f;
+    [SerializeField] float jumpForce = 7f;
     [SerializeField] float dashForce = 5f;
     [SerializeField] Animator animator;
     [SerializeField] LayerMask groundLayer;
@@ -18,8 +17,6 @@ public class PlayerMovement : MonoBehaviour
     private CapsuleCollider capsuleCollider;
     private const string AnimRun = "isRun";
     private const string AnimJum = "isJump";
-    private const string AnimSlip = "isJump2";
-    private const string AnimFall = "TriggerFall";
     private float _rotationVelocity;
     private float _verticalVelocity;
     Vector3 dir;
@@ -27,7 +24,7 @@ public class PlayerMovement : MonoBehaviour
     int jumpCount = 0;
     int maxJump = 1;
     float originHeightCollider = 1.84f;
-    bool canControl = true;
+    
 
     public void Start()
     {
@@ -40,11 +37,9 @@ public class PlayerMovement : MonoBehaviour
 
     public void Update()
     {
-        if(canControl){
-            MoveAndRotate();
-            ControlAnim();
-        }
-        
+    
+        MoveAndRotate();
+        ControlAnim();
 
     }
     //Add event Anim
@@ -54,42 +49,9 @@ public class PlayerMovement : MonoBehaviour
     public void ScaleOriginCollider(){
         capsuleCollider.height = originHeightCollider;
     }
-    public void SetControl(){
-        canControl = true;
-    }
-    //Add event anim
-    public void StandingUp(){
-        // ScaleOriginCollider();
-        StartCoroutine(ChangeHeightAndPositionCoroutine(0.9f, originHeightCollider, 0.2f, 0.2f));
-    }
-    private IEnumerator ChangeHeightAndPositionCoroutine(float startHeight, float endHeight, float increment, float duration)
-    {
-        float elapsedTime = 0f;
-
-        // Trạng thái ban đầu
-        capsuleCollider.height = startHeight;
-        Vector3 startPosition = transform.position;
-        Vector3 targetPosition = startPosition + new Vector3(0, increment, 0);
-
-        while (elapsedTime < duration)
-        {
-            // Tính toán tỷ lệ
-            float t = elapsedTime / duration;
-            capsuleCollider.height = Mathf.Lerp(startHeight, endHeight, t);
-            transform.position = Vector3.Lerp(startPosition, targetPosition, t);
-
-            elapsedTime += Time.deltaTime;
-            yield return null; // Đợi cho frame tiếp theo
-        }
-
-        // Đảm bảo chiều cao và vị trí cuối cùng
-        capsuleCollider.height = endHeight;
-        transform.position = targetPosition;
-    }
 
     private Action Jump()
     {
-        if(!canControl) return null;
         if (canJump)
         {
             _verticalVelocity = jumpForce;
@@ -100,7 +62,6 @@ public class PlayerMovement : MonoBehaviour
         else{
             if(jumpCount<maxJump){
                 jumpCount++;
-                animator.SetBool(AnimSlip,true);
                 Debug.Log("Dash");
                 //control dash
                 rb.AddForce(transform.forward*dashForce,ForceMode.Impulse);
@@ -122,27 +83,11 @@ public class PlayerMovement : MonoBehaviour
             jumpCount = 0;
             _verticalVelocity = 0f;
             animator.SetBool(AnimJum,false);
-            animator.SetBool(AnimSlip,false);
             canJump = true;
         }
         else{
             animator.SetBool(AnimJum,true);
             canJump = false;
-        }
-    }
-    public void Slip(){
-        animator.SetBool(AnimSlip,true);
-        Debug.Log("Slip");
-    }
-    void OnCollisionEnter(Collision other)
-    {
-        if(other.gameObject.CompareTag("Slip")){
-            Slip();
-        }
-        if(other.gameObject.CompareTag("Bounce")){
-            canControl = false;
-            ScaleCollider();
-            animator.SetTrigger(AnimFall);
         }
     }
     public void MoveAndRotate(){
@@ -154,7 +99,6 @@ public class PlayerMovement : MonoBehaviour
         if(dir.magnitude>0.1f){
             // Move();
             MoveRotate();
-
         }
     }
     private void Move()
@@ -182,8 +126,6 @@ public class PlayerMovement : MonoBehaviour
     
         // Vector3 rotate = Vector3.RotateTowards(transform.forward,dir,rotateSpeed*Time.deltaTime,0f);
         // transform.rotation = Quaternion.LookRotation(rotate);
-
-
     }
     private bool IsGrounded()
     {
