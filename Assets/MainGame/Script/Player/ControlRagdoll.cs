@@ -3,25 +3,38 @@ using UnityEngine;
 public class ControlRagdoll : MonoBehaviour
 {
     public Rigidbody[] rigidbodies;
+    public Animator animator;
 
     void Start()
     {
         rigidbodies = GetComponentsInChildren<Rigidbody>();
-        EnableRagdoll();
+        animator = GetComponent<Animator>();
+        DisableRagdoll();
     }
+
+    void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.C)){
+            EnableRagdoll();
+        }
+        if(Input.GetKeyDown(KeyCode.V)){
+            DisableRagdoll();
+        }
+    }
+
     [ContextMenu("Dis")]
     public void DisableRagdoll(){
+        animator.enabled =true;
         foreach(var item in rigidbodies){
-            item.mass = 0;
-            item.angularDamping = 0;
-            item.useGravity = false;
+
             item.isKinematic = true;
         }
     }
     [ContextMenu("Enable")]
     public void EnableRagdoll(){
+        animator.enabled =false;
         foreach(var item in rigidbodies){
-            item.useGravity = false;
+
             item.isKinematic = false;
         }
     }

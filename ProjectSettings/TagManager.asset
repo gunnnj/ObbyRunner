@@ -11,6 +11,7 @@ TagManager:
   - Slip
   - Checkpoint
   - Bounce
+  - Kill
   layers:
   - Default
   - TransparentFX

@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Threading.Tasks;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -12,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] Animator animator;
     [SerializeField] LayerMask groundLayer;
     [SerializeField] Transform cameraTransform;
+    [SerializeField] bool useJoystick = true;
     private Rigidbody rb;
     private VariableJoystick joystick;
     private PlayUI playUI;
@@ -22,12 +24,13 @@ public class PlayerMovement : MonoBehaviour
     private const string AnimFall = "TriggerFall";
     private float _rotationVelocity;
     private float _verticalVelocity;
+    private Vector3 posRevive;
     Vector3 dir;
     bool canJump = true;
     int jumpCount = 0;
     int maxJump = 1;
     float originHeightCollider = 1.84f;
-    bool canControl = true;
+    public bool canControl = true;
 
     public void Start()
     {
@@ -36,6 +39,7 @@ public class PlayerMovement : MonoBehaviour
         playUI = FindFirstObjectByType<PlayUI>();
         playUI.onJump = ()=>Jump();
         joystick = playUI.joystick;
+        posRevive = transform.position;
     }
 
     public void Update()
@@ -43,13 +47,15 @@ public class PlayerMovement : MonoBehaviour
         if(canControl){
             MoveAndRotate();
             ControlAnim();
+            if(Input.GetKeyDown(KeyCode.Space)){
+                Jump();
+            }
         }
         
-
     }
     //Add event Anim
     public void ScaleCollider(){
-        capsuleCollider.height = 0.9f;
+        capsuleCollider.height = 1.2f; //old 0.9
     }
     public void ScaleOriginCollider(){
         capsuleCollider.height = originHeightCollider;
@@ -134,6 +140,17 @@ public class PlayerMovement : MonoBehaviour
         animator.SetBool(AnimSlip,true);
         Debug.Log("Slip");
     }
+    void OnTriggerEnter(Collider other)
+    {
+        if(other.CompareTag("Checkpoint")){
+            posRevive = other.transform.position;
+        }
+        if(other.CompareTag("Kill")){
+            // Dead();
+            
+            Revive();
+        }
+    }
     void OnCollisionEnter(Collision other)
     {
         if(other.gameObject.CompareTag("Slip")){
@@ -146,8 +163,17 @@ public class PlayerMovement : MonoBehaviour
         }
     }
     public void MoveAndRotate(){
-        float dirX = joystick.Horizontal;
-        float dirZ = joystick.Vertical;
+        float dirX;
+        float dirZ;
+        if(useJoystick){
+            dirX = joystick.Horizontal;
+            dirZ = joystick.Vertical;
+        }
+        else{
+            dirX = Input.GetAxis("Horizontal");
+            dirZ = Input.GetAxis("Vertical");
+        }
+        
 
         dir = new Vector3(dirX,0,dirZ);
 
@@ -157,13 +183,13 @@ public class PlayerMovement : MonoBehaviour
 
         }
     }
-    private void Move()
-    {
-        //old move
-        Vector3 newPos = transform.position+dir;
-        transform.position = Vector3.Lerp(transform.position,newPos,speed*Time.deltaTime);
+    // private void Move()
+    // {
+    //     //old move
+    //     Vector3 newPos = transform.position+dir;
+    //     transform.position = Vector3.Lerp(transform.position,newPos,speed*Time.deltaTime);
 
-    }
+    // }
     public void MoveRotate(){
         //rotation
         float targetRotation = Mathf.Atan2(dir.x,dir.z)*Mathf.Rad2Deg + cameraTransform.eulerAngles.y;
@@ -191,5 +217,17 @@ public class PlayerMovement : MonoBehaviour
         Vector3 checkPosition = transform.position - new Vector3(0, checkDistance, 0);
     
         return Physics.CheckSphere(checkPosition, checkDistance, groundLayer);
+    }
+
+    [ContextMenu("Revive")]
+    public async void Revive(){
+        await Task.Delay(200);
+        animator.SetBool(AnimRun,false);
+        animator.SetBool(AnimJum,false);
+        transform.position = posRevive + new Vector3(0,1f,0);
+    }
+    public void Dead(){
+        //CallEffect or load UI lose
+        Debug.Log("Dead");
     }
 }

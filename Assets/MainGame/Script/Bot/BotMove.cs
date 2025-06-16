@@ -19,7 +19,6 @@ public class BotMove : MonoBehaviour
     async void Start()
     {
         await Task.Delay(200);
-        Debug.Log(starCheckPoint.CountPoint());
         target = starCheckPoint.RandomPoint();
         agent.SetDestination(target.position);
     }

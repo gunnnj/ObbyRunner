@@ -6,17 +6,16 @@ using UnityEngine.UI;
 public class FreelookCamera : MonoBehaviour, IDragHandler, IPointerDownHandler, IPointerUpHandler
 {
     Image imgCam;
-    [SerializeField] CinemachineFreeLook camFreelook;
+    // [SerializeField] CinemachineFreeLook camFreelook;
+
+    [SerializeField] private CinemachineOrbitalFollow orbitalFollow;
     private Vector2 lastTouchPosition;
     [SerializeField] float touchSensitivityX = 0.1f; 
     [SerializeField] float touchSensitivityY = 0.1f;
     void Start()
     {
         imgCam = GetComponent<Image>();
-
-        //mobile
-        camFreelook.m_XAxis.m_InputAxisName = null;
-        camFreelook.m_YAxis.m_InputAxisName = null;
+          
     }
     public void OnDrag(PointerEventData eventData)
     {
@@ -31,9 +30,26 @@ public class FreelookCamera : MonoBehaviour, IDragHandler, IPointerDownHandler, 
             Vector2 currentTouchPosition = eventData.position;
             Vector2 deltaTouch = currentTouchPosition - lastTouchPosition;
 
-            camFreelook.m_XAxis.m_InputAxisValue = deltaTouch.x * touchSensitivityX;
-            camFreelook.m_YAxis.m_InputAxisValue = deltaTouch.y * touchSensitivityY;
-
+            orbitalFollow.HorizontalAxis.Value += deltaTouch.x * touchSensitivityX;
+            if(orbitalFollow.VerticalAxis.Value < orbitalFollow.VerticalAxis.Range[0]){
+                if(deltaTouch.y * touchSensitivityY > 0){
+                    orbitalFollow.VerticalAxis.Value += deltaTouch.y * touchSensitivityY;
+                }
+                else{
+                    lastTouchPosition = currentTouchPosition;
+                    return;
+                }
+            }
+            if(orbitalFollow.VerticalAxis.Value > orbitalFollow.VerticalAxis.Range[1]){
+                if(deltaTouch.y * touchSensitivityY < 0){
+                    orbitalFollow.VerticalAxis.Value += deltaTouch.y * touchSensitivityY;
+                }
+                else{
+                    lastTouchPosition = currentTouchPosition;
+                    return;
+                }
+            }
+            orbitalFollow.VerticalAxis.Value += deltaTouch.y * touchSensitivityY;
             lastTouchPosition = currentTouchPosition;
         }
     }
@@ -46,7 +62,5 @@ public class FreelookCamera : MonoBehaviour, IDragHandler, IPointerDownHandler, 
     public void OnPointerUp(PointerEventData eventData)
     {
 
-        camFreelook.m_XAxis.m_InputAxisValue = 0;
-        camFreelook.m_YAxis.m_InputAxisValue = 0;
     }
 }
