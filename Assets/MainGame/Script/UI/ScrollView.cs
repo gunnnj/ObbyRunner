@@ -5,23 +5,21 @@ using UnityEngine.UI;
 
 public class ScrollView : MonoBehaviour
 {
-    // public Button btnScroll;
+
     public ScrollRect scrollRect;
     public RectTransform viewPort;
     public RectTransform contentPanel;
     public HorizontalLayoutGroup HLG;
     public RectTransform[] ItemList;
-    // public SnapToItem snapToItem;
-    // public GameObject singleArrow;
-    // public GameObject doubleArrow;
+    public SnapToItem snapToItem;
     public List<ItemMap> listItemMap =  new List<ItemMap>();
     Vector2 OldVelocity;
     bool isUpdated;
 
     void Start()
     {
-        // snapToItem = GetComponent<SnapToItem>();
-        // doubleArrow.SetActive(false);
+        snapToItem = GetComponent<SnapToItem>();
+
         isUpdated = false;
         OldVelocity = Vector2.zero;
 
@@ -100,13 +98,12 @@ public class ScrollView : MonoBehaviour
 
         scrollRect.velocity = Vector2.zero;
 
-        // if (snapToItem != null)
-        // {
-        //     snapToItem.SnapToNearestItem();
-        //     scrollRect.horizontal = false;
-        //     doubleArrow.SetActive(true);
-        //     singleArrow.SetActive(false);
-        // }
+        if (snapToItem != null)
+        {
+            snapToItem.SnapToNearestItem();
+            scrollRect.horizontal = false;
+
+        }
     }
     public void ActiveMap(int id){
         foreach(var item in listItemMap){

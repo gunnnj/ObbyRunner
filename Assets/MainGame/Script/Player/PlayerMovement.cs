@@ -140,6 +140,9 @@ public class PlayerMovement : MonoBehaviour
         animator.SetBool(AnimSlip,true);
         Debug.Log("Slip");
     }
+    public void ChangeMode(){
+        useJoystick = !useJoystick;
+    }
     void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag("Checkpoint")){
