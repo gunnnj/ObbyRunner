@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class PlayUI : MonoBehaviour
 {
     [SerializeField] public VariableJoystick joystick;
+    [SerializeField] public FloatingJoystick floatingJoystick;
     [SerializeField] Button btnJump;
     public Action onJump;
 

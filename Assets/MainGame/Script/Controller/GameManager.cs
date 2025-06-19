@@ -11,8 +11,8 @@ public class GameManager : MonoBehaviour
         MasterUI.Instance.HidenUI();
         ManageScene.Instance.Hiden();
         MasterUI.Instance.DisplayScreen(MasterUI.Screen.Map);
-        await Task.Delay(3000);
-        SceneManager.LoadScene(1);
+        await Task.Delay(6000);
+        // SceneManager.LoadScene(1);
     }
     public void Custom(){
         ManageScene.Instance.DisplayScene(ManageScene.Scene.Custom);
@@ -31,4 +31,17 @@ public class GameManager : MonoBehaviour
         MasterUI.Instance.DisplayScreen(MasterUI.Screen.Wheel);
         ManageScene.Instance.Hiden();
     }
+    public void PlayMapBlock(){
+        SceneManager.LoadScene(4);
+    }
+    public void PlayMapWater(){
+        SceneManager.LoadScene(3);
+    }
+    public void PlayMapBee(){
+        SceneManager.LoadScene(2);
+    }
+    public void PlayMapGoal(){
+        SceneManager.LoadScene(1);
+    }
+    
 }

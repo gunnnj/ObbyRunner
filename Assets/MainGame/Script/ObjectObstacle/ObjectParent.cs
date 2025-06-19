@@ -4,12 +4,15 @@ public class ObjectParent : MonoBehaviour
 {
     Transform oldParent;
     Transform player;
+    void Start()
+    {
+        oldParent = FindFirstObjectByType<PlayerMovement>().transform.parent;
+    }
 
     void OnCollisionEnter(Collision other)
     {
         if(other.gameObject.CompareTag("Player")){
             player = other.transform;
-            oldParent = player.parent;
             // Vector3 originalPosition = player.position;
             // Vector3 originalScale = player.localScale;
 

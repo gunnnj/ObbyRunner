@@ -1,21 +1,22 @@
 using System;
 using System.Collections;
 using System.Threading.Tasks;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] float speed = 4f;
-    // [SerializeField] float rotateSpeed = 10f;
     [SerializeField] float checkDistance = 0.1f;
     [SerializeField] float jumpForce = 20f;
     [SerializeField] float dashForce = 5f;
     [SerializeField] Animator animator;
     [SerializeField] LayerMask groundLayer;
     [SerializeField] Transform cameraTransform;
+    [SerializeField] bool canRevive = false;
     [SerializeField] bool useJoystick = true;
     private Rigidbody rb;
-    private VariableJoystick joystick;
+    private FloatingJoystick floatingJoystick;
     private PlayUI playUI;
     private CapsuleCollider capsuleCollider;
     private const string AnimRun = "isRun";
@@ -31,14 +32,26 @@ public class PlayerMovement : MonoBehaviour
     int maxJump = 1;
     float originHeightCollider = 1.84f;
     public bool canControl = true;
+    
+    void OnEnable()
+    {
+        GameEvent.eventWinGame+=WinGame;
+        GameEvent.eventLoseGame+=LoseGame;
+    }
+
+    void OnDisable()
+    {
+        GameEvent.eventWinGame-=WinGame;
+        GameEvent.eventLoseGame-=LoseGame;
+    }
 
     public void Start()
     {
         capsuleCollider = GetComponent<CapsuleCollider>();
         rb = GetComponent<Rigidbody>();
         playUI = FindFirstObjectByType<PlayUI>();
+        floatingJoystick = playUI.floatingJoystick;
         playUI.onJump = ()=>Jump();
-        joystick = playUI.joystick;
         posRevive = transform.position;
     }
 
@@ -52,6 +65,15 @@ public class PlayerMovement : MonoBehaviour
             }
         }
         
+    }
+
+    private void WinGame()
+    {
+        gameObject.SetActive(false);
+    }
+    private void LoseGame()
+    {
+        gameObject.SetActive(false);
     }
     //Add event Anim
     public void ScaleCollider(){
@@ -150,10 +172,17 @@ public class PlayerMovement : MonoBehaviour
         }
         if(other.CompareTag("Kill")){
             // Dead();
-            
-            Revive();
+            if(canRevive) Revive();
+            else{
+                GameEvent.eventLoseGame?.Invoke();
+                // Lose();
+            }
+        }
+        if(other.CompareTag("Win")){
+            GameEvent.eventWinGame?.Invoke();
         }
     }
+
     void OnCollisionEnter(Collision other)
     {
         if(other.gameObject.CompareTag("Slip")){
@@ -169,8 +198,9 @@ public class PlayerMovement : MonoBehaviour
         float dirX;
         float dirZ;
         if(useJoystick){
-            dirX = joystick.Horizontal;
-            dirZ = joystick.Vertical;
+
+            dirX = floatingJoystick.Horizontal;
+            dirZ = floatingJoystick.Vertical;
         }
         else{
             dirX = Input.GetAxis("Horizontal");
@@ -228,6 +258,7 @@ public class PlayerMovement : MonoBehaviour
         animator.SetBool(AnimRun,false);
         animator.SetBool(AnimJum,false);
         transform.position = posRevive + new Vector3(0,1f,0);
+        rb.linearVelocity = Vector3.zero;
     }
     public void Dead(){
         //CallEffect or load UI lose

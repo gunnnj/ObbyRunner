@@ -12,6 +12,8 @@ TagManager:
   - Checkpoint
   - Bounce
   - Kill
+  - Win
+  - CanDestroy
   layers:
   - Default
   - TransparentFX

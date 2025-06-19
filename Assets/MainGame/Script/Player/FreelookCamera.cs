@@ -6,8 +6,6 @@ using UnityEngine.UI;
 public class FreelookCamera : MonoBehaviour, IDragHandler, IPointerDownHandler, IPointerUpHandler
 {
     Image imgCam;
-    // [SerializeField] CinemachineFreeLook camFreelook;
-
     [SerializeField] private CinemachineOrbitalFollow orbitalFollow;
     private Vector2 lastTouchPosition;
     [SerializeField] float touchSensitivityX = 0.1f; 
@@ -31,25 +29,25 @@ public class FreelookCamera : MonoBehaviour, IDragHandler, IPointerDownHandler, 
             Vector2 deltaTouch = currentTouchPosition - lastTouchPosition;
 
             orbitalFollow.HorizontalAxis.Value += deltaTouch.x * touchSensitivityX;
-            if(orbitalFollow.VerticalAxis.Value < orbitalFollow.VerticalAxis.Range[0]){
-                if(deltaTouch.y * touchSensitivityY > 0){
-                    orbitalFollow.VerticalAxis.Value += deltaTouch.y * touchSensitivityY;
-                }
-                else{
-                    lastTouchPosition = currentTouchPosition;
-                    return;
-                }
-            }
-            if(orbitalFollow.VerticalAxis.Value > orbitalFollow.VerticalAxis.Range[1]){
+            if(orbitalFollow.VerticalAxis.Value < orbitalFollow.VerticalAxis.Range[0]+2f){
                 if(deltaTouch.y * touchSensitivityY < 0){
-                    orbitalFollow.VerticalAxis.Value += deltaTouch.y * touchSensitivityY;
+                    orbitalFollow.VerticalAxis.Value -= deltaTouch.y * touchSensitivityY;
                 }
                 else{
                     lastTouchPosition = currentTouchPosition;
                     return;
                 }
             }
-            orbitalFollow.VerticalAxis.Value += deltaTouch.y * touchSensitivityY;
+            if(orbitalFollow.VerticalAxis.Value > orbitalFollow.VerticalAxis.Range[1]-2f){
+                if(deltaTouch.y * touchSensitivityY > 0){
+                    orbitalFollow.VerticalAxis.Value -= deltaTouch.y * touchSensitivityY;
+                }
+                else{
+                    lastTouchPosition = currentTouchPosition;
+                    return;
+                }
+            }
+            orbitalFollow.VerticalAxis.Value -= deltaTouch.y * touchSensitivityY;
             lastTouchPosition = currentTouchPosition;
         }
     }
