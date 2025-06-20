@@ -12,6 +12,7 @@ public class GunCar : MonoBehaviour
     [SerializeField] float fireForce = 700f;
     [SerializeField] float timeRate = 4f;
     [SerializeField] int timeDestroyBullet = 5;
+    public bool isRandomForce = false;
     List<GameObject> poolingBullet = new List<GameObject>();
     Vector3 dir;
     
@@ -29,6 +30,9 @@ public class GunCar : MonoBehaviour
             yield return new WaitForSeconds(timeRate);
         }
     }
+    public float RandomForce(){
+        return Random.Range(fireForce-200,fireForce-50);
+    }
     [ContextMenu("Fire")]
     public async void FireBullet(){
         GameObject bull;
@@ -36,7 +40,12 @@ public class GunCar : MonoBehaviour
             bull = Instantiate(bullet,transform.position,Quaternion.identity, pool);
 
             Rigidbody rb = bull.GetComponent<Rigidbody>();
-            rb.AddForce(dir*fireForce, ForceMode.Impulse);
+            if(!isRandomForce){
+                rb.AddForce(dir*fireForce, ForceMode.Impulse);
+            }else{
+                rb.AddForce(dir*RandomForce(), ForceMode.Impulse);
+            }
+            
 
             await Task.Delay(timeDestroyBullet*1000);
             bull.SetActive(false);
@@ -47,7 +56,13 @@ public class GunCar : MonoBehaviour
             bull.transform.position = transform.position;
             bull.SetActive(true);
             Rigidbody rb = bull.GetComponent<Rigidbody>();
-            rb.AddForce(dir*fireForce, ForceMode.Impulse);
+
+            // rb.AddForce(dir*fireForce, ForceMode.Impulse);
+            if(!isRandomForce){
+                rb.AddForce(dir*fireForce, ForceMode.Impulse);
+            }else{
+                rb.AddForce(dir*RandomForce(), ForceMode.Impulse);
+            }
 
             await Task.Delay(timeDestroyBullet*1000);
             bull.SetActive(false);
