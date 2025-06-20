@@ -17,7 +17,6 @@ public class FreelookCamera : MonoBehaviour, IDragHandler, IPointerDownHandler, 
     }
     public void OnDrag(PointerEventData eventData)
     {
-
         if (RectTransformUtility.ScreenPointToLocalPointInRectangle(
             imgCam.rectTransform,
             eventData.position,

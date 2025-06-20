@@ -10,6 +10,10 @@ public class NavmeshBuilder : MonoBehaviour
         surface = GetComponent<NavMeshSurface>();
         BuildNavMesh();
     }
+    void Update()
+    {
+        UpdateNavMesh();
+    }
 
     public void BuildNavMesh()
     {
@@ -21,4 +25,5 @@ public class NavmeshBuilder : MonoBehaviour
         surface.RemoveData();
         BuildNavMesh();
     }
+    
 }
