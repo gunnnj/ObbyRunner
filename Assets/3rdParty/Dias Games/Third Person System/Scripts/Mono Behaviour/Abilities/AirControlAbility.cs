@@ -39,7 +39,7 @@ namespace DiasGames.Abilities
         // vars to control landing
         private float _highestPosition = 0;
         private bool _hardLanding = false;
-        private bool _doubleJump = false;
+        // private bool _doubleJump = false;
         private int jumpcount;
         
 
@@ -59,7 +59,7 @@ namespace DiasGames.Abilities
         public override void OnStartAbility()
         {
             jumpcount = 2;
-            _doubleJump = false;
+            // _doubleJump = false;
             _startInput = _action.move;
             _targetRotation = _camera.eulerAngles.y;
 

@@ -14,6 +14,8 @@ TagManager:
   - Kill
   - Win
   - CanDestroy
+  - Bullet
+  - Bot
   layers:
   - Default
   - TransparentFX
@@ -24,7 +26,7 @@ TagManager:
   - Ground
   - Slip
   - NavMeshLink
-  - 
+  - Bot
   - 
   - 
   - 

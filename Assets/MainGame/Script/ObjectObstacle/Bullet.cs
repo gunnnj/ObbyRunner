@@ -5,6 +5,7 @@ public class Bullet : MonoBehaviour
 {
     [SerializeField] float speedFire = 100f;
     [SerializeField] GameObject effectPrefab;
+    public int dame;
     private GameObject effect;
     // private Rigidbody rigidbody;
     bool isFire = false;
@@ -32,22 +33,43 @@ public class Bullet : MonoBehaviour
             DisActive();
         }
     }
-    public void SetInfo(Vector3 startP, Vector3 endP){
+    public void SetInfo(Vector3 startP, Vector3 endP, TypeGun typeGun){
         transform.position = startP;
         endPoint = endP;
         isFire = true;
+        switch (typeGun){
+            case TypeGun.Light:
+                dame = 30;
+                break;
+            case TypeGun.Medium:
+                dame = 50;
+                break;
+            case TypeGun.Weight:
+                dame = 70;
+                break;
+            default:
+                break;
+            
+        }
+        
     }
     public void DisActive(){
         gameObject.SetActive(false); 
     }
-    
-    private async void OnCollisionEnter(Collision other)
+    private async void OnTriggerEnter(Collider other)
     {
-        effect.SetActive(true);
-        isFire = false;
-        await Task.Delay(100);
-        effect.SetActive(false);
-        DisActive();
+        if(other.CompareTag("Player")){
+            effect.SetActive(true);
+            isFire = false;
+            await Task.Delay(100);
+            effect.SetActive(false);
+            DisActive();
+        }
     }
 
+}
+public enum TypeGun{
+    Light,
+    Medium,
+    Weight
 }

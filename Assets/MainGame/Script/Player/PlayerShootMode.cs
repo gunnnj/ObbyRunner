@@ -1,8 +1,6 @@
-using System;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
-using UnityEngine.UI;
+
 
 public class PlayerShootMode : MonoBehaviour
 {
@@ -10,14 +8,16 @@ public class PlayerShootMode : MonoBehaviour
     [SerializeField] GameObject gun;
     [SerializeField] float speed = 4f;
     [SerializeField] float rotateSpeed = 10f;
-    [SerializeField] float rayDistance = 20f;
     [SerializeField] float jumpForce = 7f;
     [SerializeField] float checkDistance = 0.1f;
     [SerializeField] LayerMask groundLayer;
+    [SerializeField] LayerMask layerShoot;
     [SerializeField] Transform bulletPool;
     [SerializeField] Transform pointShoot;
     [SerializeField] GameObject bulletPrefab;
     [SerializeField] int initialPoolSize = 16;
+    public TypeGun typeGun;
+    private float rayDistance = 50f;
     private ShooterModeUI shooterModeUI;
     private Rigidbody rb;
     private Vector3 dir;
@@ -35,6 +35,8 @@ public class PlayerShootMode : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         shooterModeUI.onJump = ()=> Jump();
         shooterModeUI.onShoot = ()=> Shoot();
+        PickGun(TypeGun.Light);
+        // SetPowerByGun();
 
     }
 
@@ -73,6 +75,28 @@ public class PlayerShootMode : MonoBehaviour
         }
     }
 
+    public void PickGun(TypeGun type){
+        typeGun = type;
+        Debug.Log("Pick gun "+type.ToString());
+        switch (typeGun){
+            case TypeGun.Light:
+                speed = 4.2f;
+                rayDistance = 50f;
+                break;
+            case TypeGun.Medium:
+                speed = 3.7f;
+                rayDistance = 40f;
+                break;
+            case TypeGun.Weight:
+                speed = 3.2f;
+                rayDistance = 30f;
+                break;
+            default:
+                break;
+            
+        }
+    }
+
     private void Shoot()
     {
         lastCalculatedPoint = GetRayEndPoint();
@@ -96,7 +120,7 @@ public class PlayerShootMode : MonoBehaviour
         Debug.DrawLine(pointShoot.position, lastCalculatedPoint, Color.red, 1f);
 
         bulletShoot = GetBullet();
-        bulletShoot.GetComponent<Bullet>().SetInfo(pointShoot.position,lastCalculatedPoint);
+        bulletShoot.GetComponent<Bullet>().SetInfo(pointShoot.position,lastCalculatedPoint, typeGun);
         bulletShoot.SetActive(true);
 
     }
@@ -119,7 +143,7 @@ public class PlayerShootMode : MonoBehaviour
         Ray ray = new Ray(rayOrigin, rayDirection);
         RaycastHit hit;
 
-        if (Physics.Raycast(ray, out hit, rayDistance))
+        if (Physics.Raycast(ray, out hit, rayDistance,layerShoot))
         {
             return hit.point;
         }
