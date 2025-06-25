@@ -65,6 +65,13 @@ public class Bullet : MonoBehaviour
             effect.SetActive(false);
             DisActive();
         }
+        if(other.CompareTag("Ground")){
+            effect.SetActive(true);
+            isFire = false;
+            await Task.Delay(100);
+            effect.SetActive(false);
+            DisActive();
+        }
     }
 
 }

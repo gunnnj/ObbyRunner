@@ -1,9 +1,11 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 
 public class PlayerShootMode : MonoBehaviour
 {
+    [SerializeField] Animator animator;
     [SerializeField] Camera mainCam;
     [SerializeField] GameObject gun;
     [SerializeField] float speed = 4f;
@@ -16,6 +18,7 @@ public class PlayerShootMode : MonoBehaviour
     [SerializeField] Transform pointShoot;
     [SerializeField] GameObject bulletPrefab;
     [SerializeField] int initialPoolSize = 16;
+    [SerializeField] GameObject[] gunGo;
     public TypeGun typeGun;
     private float rayDistance = 50f;
     private ShooterModeUI shooterModeUI;
@@ -24,6 +27,9 @@ public class PlayerShootMode : MonoBehaviour
     private Vector3 lastCalculatedPoint;
     private GameObject bulletShoot;
     private List<GameObject> poolerBullet = new List<GameObject>();
+    private const string AnimIdle = "isMove";
+    private const string AnimVelX = "VelocityX";
+    private const string AnimVelZ = "VelocityZ"; 
 
     void Awake()
     {
@@ -44,11 +50,18 @@ public class PlayerShootMode : MonoBehaviour
     {
         Rotate();
         float dirX = Input.GetAxis("Horizontal");
-        float dirY = Input.GetAxis("Vertical");
-        dir = new Vector3(dirX,0,dirY);
+        float dirZ = Input.GetAxis("Vertical");
+        dir = new Vector3(dirX,0,dirZ);
 
         if(dir.magnitude>0.1f){
+            animator.SetBool(AnimIdle, true);
+            ControlAnimation(dirX,dirZ);
             Move();
+        }
+        else{
+            animator.SetBool(AnimIdle, false);
+            animator.SetFloat(AnimVelX, 0);
+            animator.SetFloat(AnimVelZ, 0);
         }
         // if(Input.GetMouseButtonDown(0)){
         //     Shoot();
@@ -56,6 +69,48 @@ public class PlayerShootMode : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space)){
             Jump();
         }
+
+    }
+    public void DisplayGun(TypeGun typeGun){
+        for(int i =0; i< gunGo.Count(); i++){
+            if(i==(int)typeGun){
+                gunGo[i].SetActive(true);
+            }
+            else{
+                gunGo[i].SetActive(false);
+            }
+        }
+    }
+    public void ControlAnimation(float X, float Z){
+        // if(Z>0){
+        //     animator.SetFloat(AnimVelX, 1);
+        // }
+        // else if(Z==0){
+        //     animator.SetFloat(AnimVelX, 0);
+        // }
+        // else{
+        //     animator.SetFloat(AnimVelX, -1);
+        // }
+        // if(X>0){
+        //     animator.SetFloat(AnimVelZ, 1);
+        // }
+        // else if(X==0){
+        //     animator.SetFloat(AnimVelZ, 0);
+        // }
+        // else{
+        //     animator.SetFloat(AnimVelZ, -1);
+        // }
+
+        float speedChange = 5f;
+
+        // float targetVelX = X > 0 ? 1 : (X < 0 ? -1 : 0);
+        // float targetVelZ = Z > 0 ? 1 : (Z < 0 ? -1 : 0);
+
+        float targetVelX = Z > 0 ? 1 : (Z < 0 ? -1 : 0);
+        float targetVelZ = X > 0 ? 1 : (X < 0 ? -1 : 0);
+
+        animator.SetFloat(AnimVelX, Mathf.MoveTowards(animator.GetFloat(AnimVelX), targetVelX, speedChange * Time.deltaTime));
+        animator.SetFloat(AnimVelZ, Mathf.MoveTowards(animator.GetFloat(AnimVelZ), targetVelZ, speedChange * Time.deltaTime));
 
     }
     private void Jump()
@@ -78,17 +133,18 @@ public class PlayerShootMode : MonoBehaviour
     public void PickGun(TypeGun type){
         typeGun = type;
         Debug.Log("Pick gun "+type.ToString());
+        DisplayGun(type);
         switch (typeGun){
             case TypeGun.Light:
-                speed = 4.2f;
+                speed = 5f;
                 rayDistance = 50f;
                 break;
             case TypeGun.Medium:
-                speed = 3.7f;
+                speed = 4.2f;
                 rayDistance = 40f;
                 break;
             case TypeGun.Weight:
-                speed = 3.2f;
+                speed = 3.5f;
                 rayDistance = 30f;
                 break;
             default:
@@ -122,6 +178,8 @@ public class PlayerShootMode : MonoBehaviour
         bulletShoot = GetBullet();
         bulletShoot.GetComponent<Bullet>().SetInfo(pointShoot.position,lastCalculatedPoint, typeGun);
         bulletShoot.SetActive(true);
+
+        AudioShooterMode.Instance.PlaySFX(AudioClips.LaserShoot);
 
     }
 

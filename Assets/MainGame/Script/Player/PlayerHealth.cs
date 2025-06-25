@@ -13,8 +13,7 @@ public class PlayerHealth : BaseHealth
     protected override async void Revide()
     {
         base.Revide();
-        shooterModeUI.UpdateScore(TagTarget.Player);
-        Debug.Log(transParent.name+" dead");
+        shooterModeUI.UpdateScore(TagTarget.Bot);
         transParent.gameObject.SetActive(false);
         await Task.Delay(1000);
         playerShoot.PickGun(TypeGun.Light);

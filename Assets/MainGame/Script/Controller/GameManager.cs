@@ -31,6 +31,9 @@ public class GameManager : MonoBehaviour
         MasterUI.Instance.DisplayScreen(MasterUI.Screen.Wheel);
         ManageScene.Instance.Hiden();
     }
+    public void PLayMapShooter(){
+        SceneManager.LoadScene(5);
+    }
     public void PlayMapBlock(){
         SceneManager.LoadScene(4);
     }

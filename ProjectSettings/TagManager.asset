@@ -16,6 +16,7 @@ TagManager:
   - CanDestroy
   - Bullet
   - Bot
+  - Ground
   layers:
   - Default
   - TransparentFX

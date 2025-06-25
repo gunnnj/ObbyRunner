@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.AI;
 
 public class BotShooterMode : MonoBehaviour
 {
+    [SerializeField] Animator animator;
     [SerializeField] GameObject gun;
     [SerializeField] Transform bulletPool;
     [SerializeField] Transform pointShoot;
@@ -13,6 +15,7 @@ public class BotShooterMode : MonoBehaviour
     [SerializeField] float navMeshSampleRadius = 1f;
     [SerializeField] public TagTarget tagTarget;
     [HideInInspector] public NavMeshAgent agent;
+    [SerializeField] GameObject[] gunGo;
     public TypeGun typeGun;
     private SphereCollider sphereCollider;
     private Rigidbody rb;
@@ -21,6 +24,7 @@ public class BotShooterMode : MonoBehaviour
     private bool isTarget = false;
     // private bool isJumping = false;
     private List<Bullet> listBullet = new List<Bullet>();
+    private const string AnimIdle = "isIdle";
 
     void Start()
     {
@@ -45,6 +49,7 @@ public class BotShooterMode : MonoBehaviour
     {
         if(other.CompareTag(tagTarget.ToString())){
             if(isTarget){
+                animator.SetBool(AnimIdle,true);
                 isTarget = false;
                 agent.enabled = false;
                 //Code lại xử lý quay
@@ -53,6 +58,16 @@ public class BotShooterMode : MonoBehaviour
 
             }
         
+        }
+    }
+    public void DisplayGun(TypeGun typeGun){
+        for(int i =0; i< gunGo.Count(); i++){
+            if(i==(int)typeGun){
+                gunGo[i].SetActive(true);
+            }
+            else{
+                gunGo[i].SetActive(false);
+            }
         }
     }
     // [ContextMenu("Jump")]
@@ -86,18 +101,19 @@ public class BotShooterMode : MonoBehaviour
     }
     public void SetPowerByGun(){
         RandomTypeGun();
+        DisplayGun(typeGun);
         switch (typeGun){
             case TypeGun.Light:
                 sphereCollider.radius = 14;
-                agent.speed = 3.8f;
+                agent.speed = 5f;
                 break;
             case TypeGun.Medium:
                 sphereCollider.radius = 12;
-                agent.speed = 3.5f;
+                agent.speed = 4f;
                 break;
             case TypeGun.Weight:
                 sphereCollider.radius = 10;
-                agent.speed = 3f;
+                agent.speed = 3.5f;
                 break;
             default:
                 break;
@@ -130,13 +146,20 @@ public class BotShooterMode : MonoBehaviour
     }
 
     public IEnumerator ThreeShoot(Vector3 target){
-        Shoot(RandomPosShoot(target));
-        yield return new WaitForSeconds(0.5f);
-        Shoot(RandomPosShoot(target));
-        yield return new WaitForSeconds(0.5f);
-        Shoot(RandomPosShoot(target));
-        yield return new WaitForSeconds(0.5f);
+        int randomShoot  = Random.Range(2,6);
+        while(randomShoot>0){
+            Shoot(RandomPosShoot(target));
+            yield return new WaitForSeconds(0.5f);
+            randomShoot--;
+        }
+        // Shoot(RandomPosShoot(target));
+        // yield return new WaitForSeconds(0.5f);
+        // Shoot(RandomPosShoot(target));
+        // yield return new WaitForSeconds(0.5f);
+        // Shoot(RandomPosShoot(target));
+        // yield return new WaitForSeconds(0.5f);
         agent.enabled = true;
+        animator.SetBool(AnimIdle,false);
         SetNewPos();
     }
     public Vector3 RandomPosShoot(Vector3 target){
@@ -164,6 +187,7 @@ public class BotShooterMode : MonoBehaviour
             if(!item.gameObject.activeSelf){
                 item.SetInfo(pointShoot.position,target,typeGun);
                 item.gameObject.SetActive(true);
+                AudioShooterMode.Instance.PlaySFX(AudioClips.LaserShoot);
                 return;
             }
         }
