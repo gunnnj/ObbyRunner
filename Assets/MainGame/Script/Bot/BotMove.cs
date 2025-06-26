@@ -5,11 +5,13 @@ using UnityEngine.AI;
 
 public class BotMove : MonoBehaviour
 {
-    private NavMeshAgent agent;
-    private Transform target;
+    [SerializeField] GameObject body;
     [SerializeField] Checkpoint starCheckPoint;
     public AnimationCurve m_Curve = new AnimationCurve();
     public float jumpDuration = 1.0f;
+    private NavMeshAgent agent;
+    private Transform target;
+    private bool isCheck = false;
     void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -18,7 +20,7 @@ public class BotMove : MonoBehaviour
     }
     async void Start()
     {
-        await Task.Delay(200);
+        await Task.Delay(6000);
         target = starCheckPoint.RandomPoint();
         agent.SetDestination(target.position);
     }
@@ -53,6 +55,34 @@ public class BotMove : MonoBehaviour
             int idCheck = other.GetComponent<Checkpoint>().IDcheckpoint;
             target = ListCheckpoint.Instance.GetPointNextCheckpoint(idCheck);
             if(target!=null) agent.SetDestination(target.position);
+            // else{
+            //     GameEvent.eventFinish?.Invoke();
+            // }
+        }
+        if(other.CompareTag("Win")){
+            if(!isCheck){
+                GameEvent.eventFinish?.Invoke();
+                isCheck = true;
+            }
+
+            
+        }
+        if(other.CompareTag("Slip")){
+            // body.transform.eulerAngles = new Vector3(80,0,0);
+            body.transform.localRotation = Quaternion.Euler(80,0,0);
+            agent.speed = agent.speed + 2;
+            jumpDuration += 1f;
+        }
+        if(other.CompareTag("EndSlip")){
+            body.transform.localRotation = Quaternion.Euler(0,0,0);
+            // agent.speed = agent.speed - 2;
+            jumpDuration -= 1f;
+        }
+    }
+    void OnCollisionEnter(Collision other)
+    {
+        if(other.gameObject.CompareTag("Slip")){
+            body.transform.eulerAngles = new Vector3(80,0,0);
         }
     }
 

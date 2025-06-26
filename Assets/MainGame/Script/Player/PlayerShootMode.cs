@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class PlayerShootMode : MonoBehaviour
 {
+    [SerializeField] FloatingJoystick floatingJoystick;
     [SerializeField] Animator animator;
     [SerializeField] Camera mainCam;
     [SerializeField] GameObject gun;
@@ -49,8 +50,13 @@ public class PlayerShootMode : MonoBehaviour
     void Update()
     {
         Rotate();
-        float dirX = Input.GetAxis("Horizontal");
-        float dirZ = Input.GetAxis("Vertical");
+        // float dirX = Input.GetAxis("Horizontal");
+        // float dirZ = Input.GetAxis("Vertical");
+        float dirX = floatingJoystick.Horizontal;
+        float dirZ = floatingJoystick.Vertical;
+        // Debug.Log("dir X: "+dirX);
+        // Debug.Log("dir Z:"+ dirZ);
+
         dir = new Vector3(dirX,0,dirZ);
 
         if(dir.magnitude>0.1f){

@@ -180,6 +180,7 @@ public class PlayerMovement : MonoBehaviour
         }
         if(other.CompareTag("Win")){
             GameEvent.eventWinGame?.Invoke();
+            GameEvent.eventFinish?.Invoke();
         }
     }
 
