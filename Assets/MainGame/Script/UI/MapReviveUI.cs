@@ -17,7 +17,7 @@ public class MapReviveUI : MonoBehaviour
 
     void OnEnable()
     {
-        GameEvent.eventLoseGame+=LoseGame;
+        // GameEvent.eventLoseGame+=LoseGame;
         GameEvent.eventWinGame+=WinGame;
         GameEvent.eventFinish+=UpdateRank;
     }

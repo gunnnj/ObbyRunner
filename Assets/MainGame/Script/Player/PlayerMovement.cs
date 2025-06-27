@@ -250,7 +250,7 @@ public class PlayerMovement : MonoBehaviour
         // return Physics.Raycast(transform.position, Vector3.down, checkDistance, groundLayer);
         Vector3 checkPosition = transform.position - new Vector3(0, checkDistance, 0);
     
-        return Physics.CheckSphere(checkPosition, checkDistance, groundLayer);
+        return Physics.CheckSphere(checkPosition, 0.25f, groundLayer);
     }
 
     [ContextMenu("Revive")]

@@ -7,6 +7,14 @@ public class Seesaw : MonoBehaviour
     public bool useX = true;
     private bool isStart = false;
 
+    public float resetSpeed = 3f;
+    private Quaternion startRotation;
+
+    void Start()
+    {
+        startRotation = transform.rotation;
+    }
+
     void Update()
     {
         if(isStart){
@@ -16,6 +24,10 @@ public class Seesaw : MonoBehaviour
             else{
                 transform.Rotate(Vector3.left, rotationSpeed * Time.deltaTime);
             }
+        }
+        else
+        {
+            transform.rotation = Quaternion.Slerp(transform.rotation, startRotation, resetSpeed * Time.deltaTime);
         }
         
     }

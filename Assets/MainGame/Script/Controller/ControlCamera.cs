@@ -9,7 +9,7 @@ public class ControlCamera : MonoBehaviour
     void Start()
     {
         player = FindFirstObjectByType<PlayerMovement>();
-        StartCoroutine(PlayCutScene());
+        // StartCoroutine(PlayCutScene());
     }
     public IEnumerator PlayCutScene(){
         player.canControl = false;

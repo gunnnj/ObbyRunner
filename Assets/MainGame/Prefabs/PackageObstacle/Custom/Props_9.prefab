@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4080176753565242034}
   - component: {fileID: 1728051811385807170}
   - component: {fileID: 5106145919499805506}
+  - component: {fileID: 4921777514939529040}
   m_Layer: 0
   m_Name: Props_9a
   m_TagString: Untagged
@@ -128,6 +129,7 @@ MonoBehaviour:
   target: {fileID: 1330053756908597095}
   speed: 5
   isTarget: 0
+  isLoop: 1
 --- !u!114 &5106145919499805506
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -144,6 +146,34 @@ MonoBehaviour:
   isUp: 0
   isRight: 1
   isForward: 0
+  isReverse: 0
+--- !u!54 &4921777514939529040
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1363062455247254230}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &4441421876257761308
 GameObject:
   m_ObjectHideFlags: 0
