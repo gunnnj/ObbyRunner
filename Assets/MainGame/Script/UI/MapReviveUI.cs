@@ -45,7 +45,7 @@ public class MapReviveUI : MonoBehaviour
             loseUI.SetActive(true);
         }
     }
-    private void UpdateRank()
+    public void UpdateRank()
     {
         Debug.Log("Updaterank");
         rank+=1;

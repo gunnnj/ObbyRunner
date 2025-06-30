@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerRecorder : MonoBehaviour
 {
+    [SerializeField] int indexRecorder = 2; 
     private List<InputData> recordedInputs = new List<InputData>();
     private float timer = 0f;
 
@@ -34,8 +35,8 @@ public class PlayerRecorder : MonoBehaviour
     {
         // Lưu dữ liệu vào file JSON
         string json = JsonUtility.ToJson(new InputDataList { inputs = recordedInputs });
-        File.WriteAllText("D:/projects/ClimbingProject/Assets/MainGame/Recorder" + "/recorded_inputs.json", json);
-        Debug.Log("Save to path: "+"D:/projects/ClimbingProject/Assets/MainGame/Recorder" + "/recorded_inputs.json");
+        File.WriteAllText("D:/projects/ClimbingProject/Assets/MainGame/Recorder" + "/recorded_inputs"+indexRecorder+".json", json);
+        Debug.Log("Save to path: "+"D:/projects/ClimbingProject/Assets/MainGame/Recorder" + "/recorded_inputs"+indexRecorder+".json");
     }
 }
 

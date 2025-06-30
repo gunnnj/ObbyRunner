@@ -6,7 +6,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] float speed = 4f;
+    [SerializeField] float speed = 5f;
+    [SerializeField] float speedInAir = 3.5f;
     [SerializeField] float checkDistance = 0.1f;
     [SerializeField] float jumpForce = 20f;
     [SerializeField] float dashForce = 5f;
@@ -15,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] Transform cameraTransform;
     [SerializeField] bool canRevive = false;
     [SerializeField] bool useJoystick = true;
+    public float currentSpeed;
     private Rigidbody rb;
     private FloatingJoystick floatingJoystick;
     private PlayUI playUI;
@@ -53,6 +55,7 @@ public class PlayerMovement : MonoBehaviour
         floatingJoystick = playUI.floatingJoystick;
         playUI.onJump = ()=>Jump();
         posRevive = transform.position;
+        currentSpeed = speed;
     }
 
     public void Update()
@@ -146,6 +149,7 @@ public class PlayerMovement : MonoBehaviour
         }
         if (IsGrounded())
         {
+            currentSpeed = speed;
             ScaleOriginCollider();
             jumpCount = 0;
             _verticalVelocity = 0f;
@@ -154,6 +158,7 @@ public class PlayerMovement : MonoBehaviour
             canJump = true;
         }
         else{
+            currentSpeed = speedInAir;
             animator.SetBool(AnimJum,true);
             canJump = false;
         }
@@ -235,7 +240,7 @@ public class PlayerMovement : MonoBehaviour
         //move
         Vector3 targetDirection = Quaternion.Euler(0.0f, targetRotation, 0.0f) * Vector3.forward;
         
-        Vector3 newPosition = transform.position + (targetDirection.normalized * speed *10* Time.deltaTime) +
+        Vector3 newPosition = transform.position + (targetDirection.normalized * currentSpeed *10* Time.deltaTime) +
                             new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime;
 
         transform.position = Vector3.Lerp(transform.position, newPosition, 0.1f);
